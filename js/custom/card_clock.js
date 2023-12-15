@@ -1,5 +1,5 @@
 var mykey = {
-  weather: '7a62a15c4bf9338650c8249c0b67771c' // 替换成从openweather获取的API 密钥
+  weather: '5169c3747225c4f4f42f575f5623e9f0' // 替换成从openweather获取的API 密钥
 };
 var locationurl = 'https://extreme-ip-lookup.com/json/';
 var cityname = '';
