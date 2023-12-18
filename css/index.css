@@ -15178,14 +15178,14 @@ li.categoryBar-list-item {
   *white-space: normal !important;
 }
 @font-face {
-  font-family: 'Candyhome';
-  src: url("https://cdn.jsdelivr.net/gh/Akilarlxh/akilarlxh.github.io/fonts/Candyhome.ttf");
+  font-family: 'TaikoMagic';
+  src: url("https://npm.elemecdn.com/akiblog@1.0.2/fontsdest/REEJI-TaikoMagicGB-Flash-Bold.ttf");
   font-display: swap;
   font-weight: lighter;
 }
 @font-face {
   font-family: 'ZhuZiAYuanJWD';
-  src: url("https://cdn.jsdelivr.net/gh/Akilarlxh/akilarlxh.github.io/fonts/ZhuZiAYuanJWD.ttf");
+  src: url("https://npm.elemecdn.com/akiblog@1.0.2/fontsdest/ZhuZiAWan.ttf");
   font-display: swap;
   font-weight: lighter;
 }
@@ -15201,7 +15201,7 @@ h1.post-title {
 }
 @font-face {
   font-family: 'UnidreamLED';
-  src: url("https://cdn.jsdelivr.net/gh/Akilarlxh/Akilarlxh.github.io@v3.3.3_3/clock/fonts/UnidreamLED.ttf");
+  src: url("https://npm.elemecdn.com/akiblog@1.0.2/fontsdest/UnidreamLED.ttf");
   font-display: swap;
 }
 .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
