@@ -303,3 +303,26 @@ function SAOSwitch(){
     SAOKeepOff()
   }
 }
+function Navvisible(){
+  var menuItem = document.getElementById("menu_item");
+  if (menuItem.style.display == "none") {
+    menuItem.style.display = "";
+  }else {
+    menuItem.style.display = "none";
+  }
+  console.log("menuItem.style.display:" + menuItem.style.display);
+}
+// function Navvisible(){
+//   var navbar = document.getElementById('menu-container')
+//   if (navbar) {
+//       // 首先判断是否存在active类
+//       if (navbar.className.indexOf('active-menu-bar') > -1){
+//         // 存在则移除
+//         navbar.classList.remove('active-menu-bar');
+//       }
+//       else{
+//         // 不存在则先添加
+//         navbar.classList.add('active-menu-bar');
+//       }
+//   }
+// }

@@ -8733,6 +8733,7 @@ _:future,
   transition: all 0.5s;
 }
 .menu-container {
+  color: #fff !important;
   display: -webkit-box;
   display: -moz-box;
   display: -webkit-flex;
@@ -8778,14 +8779,13 @@ _:future,
 .menu-container .menu-item {
   background: transparent;
   height: 60px;
-  width: 50%;
-  scale: 50%;
+  width: 100%;
+  text-align: center;
   position: relative;
-  left: -12%;
+  top: 50px;
   overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap;
-  text-align: left;
   font-size: 16px;
 }
 .menu-container .menu-item::-webkit-scrollbar {
@@ -9030,12 +9030,14 @@ _:future,
   width: 25%;
 }
 .menu-container .top-bar .message-container .message-weather .s-sticker-tmp.module {
-  color: var(--nav-font-color) !important;
   font-family: 'ZhuZiAYuanJWD' !important;
 }
 .menu-container .top-bar .message-container .message-weather .s-sticker-city.module {
-  color: var(--nav-font-color) !important;
   font-family: 'ZhuZiAYuanJWD' !important;
+}
+.menu-container .top-bar .message-container .message-weather #he-plugin-simple .s-sticker .s-sticker-cond {
+  width: 30px;
+  display: inline-block !important;
 }
 .menu-container .top-bar .message-container .message-date {
   width: 50%;
@@ -9176,9 +9178,6 @@ _:future,
   -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center;
-}
-.menu-container .top-bar .message-container .message-function #toggle-menu {
-  display: none;
 }
 .menu-container button.active-button {
   background: var(--nav-button-color);
