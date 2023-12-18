@@ -7142,6 +7142,11 @@ _:future,
     display: none !important;
   }
 }
+:root {
+  --ark-loading-shadow-color: rgba(226,248,24,0.8);
+  --ark-loading-power-color: rgba(40,99,200,0.8);
+  --ark-loading-power-shadow: rgba(14,219,255,0.8);
+}
 .loading-bg,
 #loading-box .loading-left-bg,
 #loading-box .loading-right-bg {
@@ -7185,288 +7190,1506 @@ _:future,
   transform: translate(100%, 0);
 }
 #loading-box {
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  transition: all 0.5s;
+  position: fixed;
+  z-index: 1001;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  display: box;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -o-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -o-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+#loading-box #ark-loading {
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+  filter: none;
+  position: relative;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -o-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -o-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+#loading-box #ark-loading .ark-loading-border {
+  position: relative;
+  height: 280px;
+  width: 280px;
+  display: box;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -o-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -o-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 5px inset var(--ark-loading-shadow-color);
+  box-shadow: 0 0 5px inset var(--ark-loading-shadow-color);
+  border-style: solid;
+  border-color: var(--ark-loading-shadow-color) transparent var(--ark-loading-shadow-color) var(--ark-loading-shadow-color);
+  border-width: 2px;
+}
+#loading-box #ark-loading .ark-loading-border:before {
+  content: "";
+  position: absolute;
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+  filter: none;
+  height: 276px;
+  width: 276px;
+  border-radius: 50%;
+  border-style: solid;
+  border-color: var(--ark-loading-shadow-color) var(--ark-loading-shadow-color) var(--ark-loading-shadow-color) transparent;
+  border-width: 5px;
+  top: -5px;
+  left: -5px;
+  -webkit-animation: ark-loading-rotate 5s linear infinite;
+  -moz-animation: ark-loading-rotate 5s linear infinite;
+  -o-animation: ark-loading-rotate 5s linear infinite;
+  -ms-animation: ark-loading-rotate 5s linear infinite;
+  animation: ark-loading-rotate 5s linear infinite;
+}
+#loading-box #ark-loading .ark-loading-border:after {
+  content: "";
+  position: absolute;
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+  filter: none;
+  height: 246px;
+  width: 246px;
+  border-radius: 50%;
+  border-style: solid;
+  border-color: var(--ark-loading-shadow-color) var(--ark-loading-shadow-color) var(--ark-loading-shadow-color) transparent;
+  border-width: 2px;
+  top: 13px;
+  left: 13px;
+  -webkit-animation: ark-loading-rotate 3s linear infinite;
+  -moz-animation: ark-loading-rotate 3s linear infinite;
+  -o-animation: ark-loading-rotate 3s linear infinite;
+  -ms-animation: ark-loading-rotate 3s linear infinite;
+  animation: ark-loading-rotate 3s linear infinite;
+}
+#loading-box #ark-loading .ark-loading-border .ark-loading-container {
+  height: 280px;
+  width: 280px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -o-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -o-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -o-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  color: #fff;
+  font-size: 36px;
+  font-family: UnidreamLED, TaikoMagic;
+  text-shadow: 2px 2px 3px #cecece;
+}
+#loading-box #ark-loading .ark-loading-border .ark-loading-container .ark-loading-tip:after {
+  content: 'Loading...';
+  -webkit-animation: ark-loading-flash 1.5s linear infinite;
+  -moz-animation: ark-loading-flash 1.5s linear infinite;
+  -o-animation: ark-loading-flash 1.5s linear infinite;
+  -ms-animation: ark-loading-flash 1.5s linear infinite;
+  animation: ark-loading-flash 1.5s linear infinite;
+}
+#loading-box #ark-loading .ark-loading-border .ark-loading-container .pace {
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+#loading-box #ark-loading .ark-loading-border .ark-loading-container .pace .pace-progress {
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+  filter: none;
+  position: relative;
+  height: 40px;
+  width: 40px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -o-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -o-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-transform: translate3d(0, 0, 0) !important;
+  -moz-transform: translate3d(0, 0, 0) !important;
+  -o-transform: translate3d(0, 0, 0) !important;
+  -ms-transform: translate3d(0, 0, 0) !important;
+  transform: translate3d(0, 0, 0) !important;
+}
+#loading-box #ark-loading .ark-loading-border .ark-loading-container .pace .pace-progress:after {
+  display: block;
+  content: attr(data-progress-text);
+  font-size: 40px;
+  line-height: 1;
+  text-align: right;
+}
+#loading-box #ark-loading .ark-loading-border .ark-loading-container .pace .pace-activity {
+  filter: drop-shadow(0 0 3px var(--ark-loading-power-shadow));
+}
+#loading-box #ark-loading .ark-loading-border .ark-loading-container .pace .pace-activity:before {
+  top: calc(50% - 175px);
+  display: block;
+  height: 350px;
+  width: 100px;
+  opacity: 0.6;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+  filter: alpha(opacity=60);
+  content: "";
+  background: -webkit-repeating-linear-gradient(bottom, var(--ark-loading-power-color) 0, var(--ark-loading-power-color) 3.5%, transparent 3.51%, transparent 5%);
+  background: -moz-repeating-linear-gradient(bottom, var(--ark-loading-power-color) 0, var(--ark-loading-power-color) 3.5%, transparent 3.51%, transparent 5%);
+  background: -o-repeating-linear-gradient(bottom, var(--ark-loading-power-color) 0, var(--ark-loading-power-color) 3.5%, transparent 3.51%, transparent 5%);
+  background: -ms-repeating-linear-gradient(bottom, var(--ark-loading-power-color) 0, var(--ark-loading-power-color) 3.5%, transparent 3.51%, transparent 5%);
+  background: repeating-linear-gradient(to top, var(--ark-loading-power-color) 0, var(--ark-loading-power-color) 3.5%, transparent 3.51%, transparent 5%);
+  position: fixed;
+  border-radius: 5px;
+  left: calc(50% - 600px);
+  -webkit-transform: skew(-30deg, -10deg);
+  -moz-transform: skew(-30deg, -10deg);
+  -o-transform: skew(-30deg, -10deg);
+  -ms-transform: skew(-30deg, -10deg);
+  transform: skew(-30deg, -10deg);
+}
+#loading-box #ark-loading .ark-loading-border .ark-loading-container .pace .pace-activity:after {
+  top: calc(50% - 175px);
+  display: block;
+  height: 350px;
+  width: 100px;
+  opacity: 0.6;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+  filter: alpha(opacity=60);
+  content: "";
+  background: -webkit-repeating-linear-gradient(bottom, var(--ark-loading-power-color) 0, var(--ark-loading-power-color) 3.5%, transparent 3.51%, transparent 5%);
+  background: -moz-repeating-linear-gradient(bottom, var(--ark-loading-power-color) 0, var(--ark-loading-power-color) 3.5%, transparent 3.51%, transparent 5%);
+  background: -o-repeating-linear-gradient(bottom, var(--ark-loading-power-color) 0, var(--ark-loading-power-color) 3.5%, transparent 3.51%, transparent 5%);
+  background: -ms-repeating-linear-gradient(bottom, var(--ark-loading-power-color) 0, var(--ark-loading-power-color) 3.5%, transparent 3.51%, transparent 5%);
+  background: repeating-linear-gradient(to top, var(--ark-loading-power-color) 0, var(--ark-loading-power-color) 3.5%, transparent 3.51%, transparent 5%);
+  position: fixed;
+  border-radius: 5px;
+  right: calc(50% - 600px);
+  -webkit-transform: skew(30deg, 10deg);
+  -moz-transform: skew(30deg, 10deg);
+  -o-transform: skew(30deg, 10deg);
+  -ms-transform: skew(30deg, 10deg);
+  transform: skew(30deg, 10deg);
+}
+#loading-box #ark-loading .ark-loading-border .ark-loading-container .pace.pace-inactive .pace-progress {
+  display: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+#loading-box #ark-loading .ark-loading-border .ark-loading-container .pace.pace-inactive .pace-activity:before {
+  -webkit-transform: skew(20deg, 20deg) translateX(-2000px);
+  -moz-transform: skew(20deg, 20deg) translateX(-2000px);
+  -o-transform: skew(20deg, 20deg) translateX(-2000px);
+  -ms-transform: skew(20deg, 20deg) translateX(-2000px);
+  transform: skew(20deg, 20deg) translateX(-2000px);
+  -webkit-transition: -webkit-transform 0.5s ease-in 0.3s;
+  -moz-transition: -moz-transform 0.5s ease-in 0.3s;
+  -o-transition: -o-transform 0.5s ease-in 0.3s;
+  -ms-transition: -ms-transform 0.5s ease-in 0.3s;
+  transition: transform 0.5s ease-in 0.3s;
+}
+#loading-box #ark-loading .ark-loading-border .ark-loading-container .pace.pace-inactive .pace-activity:after {
+  -webkit-transform: skew(-20deg, -20deg) translateX(2000px);
+  -moz-transform: skew(-20deg, -20deg) translateX(2000px);
+  -o-transform: skew(-20deg, -20deg) translateX(2000px);
+  -ms-transform: skew(-20deg, -20deg) translateX(2000px);
+  transform: skew(-20deg, -20deg) translateX(2000px);
+  -webkit-transition: -webkit-transform 0.5s ease-in 0.3s;
+  -moz-transition: -moz-transform 0.5s ease-in 0.3s;
+  -o-transition: -o-transform 0.5s ease-in 0.3s;
+  -ms-transition: -ms-transform 0.5s ease-in 0.3s;
+  transition: transform 0.5s ease-in 0.3s;
+}
+#loading-box.arkend {
+  -webkit-transition: all 1s ease-in 0.3s;
+  -moz-transition: all 1s ease-in 0.3s;
+  -o-transition: all 1s ease-in 0.3s;
+  -ms-transition: all 1s ease-in 0.3s;
+  transition: all 1s ease-in 0.3s;
+}
+#loading-box.arkend #ark-loading {
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  -webkit-transition: opacity 0.4s ease-in 0.6s;
+  -moz-transition: opacity 0.4s ease-in 0.6s;
+  -o-transition: opacity 0.4s ease-in 0.6s;
+  -ms-transition: opacity 0.4s ease-in 0.6s;
+  transition: opacity 0.4s ease-in 0.6s;
+}
+#loading-box.arkend #ark-loading .ark-loading-border {
+  border-width: 0;
+  -webkit-transition: border-width 0.3s ease-in 0.6s;
+  -moz-transition: border-width 0.3s ease-in 0.6s;
+  -o-transition: border-width 0.3s ease-in 0.6s;
+  -ms-transition: border-width 0.3s ease-in 0.6s;
+  transition: border-width 0.3s ease-in 0.6s;
+}
+#loading-box.arkend #ark-loading .ark-loading-border:before {
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+  filter: none;
+  -webkit-transition: opacity 0.3s ease-in 0.3s;
+  -moz-transition: opacity 0.3s ease-in 0.3s;
+  -o-transition: opacity 0.3s ease-in 0.3s;
+  -ms-transition: opacity 0.3s ease-in 0.3s;
+  transition: opacity 0.3s ease-in 0.3s;
+}
+#loading-box.arkend #ark-loading .ark-loading-border:after {
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+  filter: none;
+  -webkit-transition: opacity 0.3s ease-in 0.3s;
+  -moz-transition: opacity 0.3s ease-in 0.3s;
+  -o-transition: opacity 0.3s ease-in 0.3s;
+  -ms-transition: opacity 0.3s ease-in 0.3s;
+  transition: opacity 0.3s ease-in 0.3s;
+}
+#loading-box.arkend #ark-loading .ark-loading-border .ark-loading-container .ark-loading-tip {
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  -webkit-transition: opacity 0.5s ease-in 0.5s;
+  -moz-transition: opacity 0.5s ease-in 0.5s;
+  -o-transition: opacity 0.5s ease-in 0.5s;
+  -ms-transition: opacity 0.5s ease-in 0.5s;
+  transition: opacity 0.5s ease-in 0.5s;
+}
+#loading-box.arkend #ark-loading .ark-loading-border .ark-loading-container .ark-loading-tip:after {
+  content: 'Loaded!' !important;
+}
+:root {
+  --ark-cab-border-color: rgba(255,255,255,0.7);
+  --ark-cab-shadow-color: rgba(226,248,24,0.8);
+}
+[data-theme=dark] {
+  --ark-cab-border-color: rgba(255,255,255,0.7);
+  --ark-cab-shadow-color: rgba(24,248,229,0.8);
+}
+#ark-cab-box {
   position: fixed;
   z-index: 1000;
   width: 100vw;
   height: 100vh;
+  margin: 0;
   overflow: hidden;
-  text-align: center;
-  background: rgba(236,236,236,0.95);
-  text-align: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -o-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -o-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
 }
-#loading-box:before {
-  content: '';
-  display: inline-block;
-  height: 100%;
-  vertical-align: middle;
-}
-#loading-box.loaded {
+#ark-cab-box.arksink {
   z-index: -1000;
 }
-#loading-box.loaded .SAO-scene {
-  display: none;
+#ark-cab-box * {
+  -webkit-transition: all 0.5s ease-in;
+  -moz-transition: all 0.5s ease-in;
+  -o-transition: all 0.5s ease-in;
+  -ms-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
 }
-#loading-box .SAO-wall {
-  background: url("https://npm.elemecdn.com/akilar-candyassets/image/72c0a2ea.png");
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
+#ark-cab-box #ark-cab {
+  position: relative;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -o-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -o-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   width: 100%;
   height: 100%;
-  position: absolute;
-  opacity: 0;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-  filter: alpha(opacity=0);
-  -webkit-animation: SAO-LKS-fade 12s infinite linear;
-  -moz-animation: SAO-LKS-fade 12s infinite linear;
-  -o-animation: SAO-LKS-fade 12s infinite linear;
-  -ms-animation: SAO-LKS-fade 12s infinite linear;
-  animation: SAO-LKS-fade 12s infinite linear;
-  -webkit-animation-delay: 0;
-  -moz-animation-delay: 0;
-  -o-animation-delay: 0;
-  -ms-animation-delay: 0;
-  animation-delay: 0;
+  background: rgba(20,20,20,0.5);
+  backdrop-filter: blur(8px);
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
 }
-#loading-box .SAO-scene {
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-perspective: 5px;
-  -moz-perspective: 5px;
-  -ms-perspective: 5px;
-  perspective: 5px;
-  -webkit-perspective-origin: 50% 50%;
-  -moz-perspective-origin: 50% 50%;
-  -ms-perspective-origin: 50% 50%;
-  perspective-origin: 50% 50%;
+#ark-cab-box #ark-cab .ark-cab-main-container {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -o-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -o-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-ordinal-group: 2;
+  -moz-box-ordinal-group: 2;
+  -o-box-ordinal-group: 2;
+  -ms-flex-order: 2;
+  -webkit-order: 2;
+  order: 2;
+  width: 500px;
+  height: 500px;
+  clip-path: circle(100%);
+}
+#ark-cab-box #ark-cab .ark-cab-main-container .ark-cab-outside-border {
+  height: 360px;
+  width: 360px;
   position: relative;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -o-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -o-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border: 2px dotted;
+  border-color: var(--ark-cab-border-color) transparent transparent transparent;
+  border-radius: 50%;
 }
-#loading-box .SAO-wrap {
+#ark-cab-box #ark-cab .ark-cab-main-container .ark-cab-outside-border::before {
+  content: "";
   position: absolute;
-  width: 1000px;
-  height: 1000px;
-  left: -500px;
-  top: -500px;
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  -o-transform-style: preserve-3d;
-  -ms-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  -webkit-animation: SAO-LKS-move 12s infinite linear;
-  -moz-animation: SAO-LKS-move 12s infinite linear;
-  -o-animation: SAO-LKS-move 12s infinite linear;
-  -ms-animation: SAO-LKS-move 12s infinite linear;
-  animation: SAO-LKS-move 12s infinite linear;
-  -webkit-animation-fill-mode: forwards;
-  -moz-animation-fill-mode: forwards;
-  -o-animation-fill-mode: forwards;
-  -ms-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
+  height: 370px;
+  width: 370px;
+  top: -5px;
+  left: -5px;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 0 30px inset var(--ark-cab-border-color);
+  box-shadow: 0 0 0 30px inset var(--ark-cab-border-color);
+  clip-path: polygon(50% 50%, 51% 0, 49% 0, 50% 50%, 2% 0, 0 2%, 50% 50%, 0 49%, 0 51%, 50% 50%, 0 98%, 2% 100%, 50% 50%, 49% 100%, 51% 100%, 50% 50%, 98% 100%, 100% 98%, 50% 50%, 100% 51%, 100% 49%, 50% 50%, 100% 2%, 98% 0);
 }
-#loading-box .SAO-wrap:nth-child(2) {
-  -webkit-animation: SAO-LKS-move 12s infinite linear;
-  -moz-animation: SAO-LKS-move 12s infinite linear;
-  -o-animation: SAO-LKS-move 12s infinite linear;
-  -ms-animation: SAO-LKS-move 12s infinite linear;
-  animation: SAO-LKS-move 12s infinite linear;
-  -webkit-animation-delay: 6s;
-  -moz-animation-delay: 6s;
-  -o-animation-delay: 6s;
-  -ms-animation-delay: 6s;
-  animation-delay: 6s;
+#ark-cab-box #ark-cab .ark-cab-main-container .ark-cab-outside-border::after {
+  content: "";
+  position: absolute;
+  height: 344px;
+  width: 344px;
+  top: 3px;
+  left: 0;
+  border-radius: 50%;
+  border: 3px dashed var(--ark-cab-border-color);
+  clip-path: inset(50% 0 0 0);
 }
-#loading-box .SAO-wrap:nth-child(2) .SAO-wall {
-  -webkit-animation-delay: 6s;
-  -moz-animation-delay: 6s;
-  -o-animation-delay: 6s;
-  -ms-animation-delay: 6s;
-  animation-delay: 6s;
+#ark-cab-box #ark-cab .ark-cab-top-triangle {
+  position: absolute;
+  display: block;
+  width: 280px;
+  height: 140px;
+  border-radius: 15px;
+  background: var(--ark-cab-border-color);
+  clip-path: polygon(50% 0, calc(50% - 75px) 0, calc(50% - 100px) 40px, calc(50% - 100px) 60px, 0 calc(100% - 17px), 0 100%, calc(50% - 72px) 30px, calc(50% + 72px) 30px, 100% 100%, 100% calc(100% - 17px), calc(50% + 100px) 60px, calc(50% + 100px) 40px, calc(50% + 75px) 0);
+  left: calc(50% - 140px);
+  bottom: calc(50% + 220px);
 }
-#loading-box .SAO-wall-right {
-  -webkit-transform: rotateY(90deg) translateZ(500px);
-  -moz-transform: rotateY(90deg) translateZ(500px);
-  -o-transform: rotateY(90deg) translateZ(500px);
-  -ms-transform: rotateY(90deg) translateZ(500px);
-  transform: rotateY(90deg) translateZ(500px);
+#ark-cab-box #ark-cab .ark-cab-bottom-left-triangle {
+  position: absolute;
+  display: block;
+  width: 260px;
+  height: 130px;
+  border-radius: 15px;
+  background: var(--ark-cab-border-color);
+  clip-path: polygon(50% 0, calc(50% - 75px) 0, calc(50% - 100px) 40px, calc(50% - 100px) 60px, 0 calc(100% - 17px), 0 100%, calc(50% - 72px) 30px, calc(50% + 72px) 30px, 100% 100%, 100% calc(100% - 17px), calc(50% + 100px) 60px, calc(50% + 100px) 40px, calc(50% + 75px) 0);
+  left: calc(50% - 460px);
+  top: calc(50% + 160px);
+  -webkit-transform: rotateZ(-120deg);
+  -moz-transform: rotateZ(-120deg);
+  -o-transform: rotateZ(-120deg);
+  -ms-transform: rotateZ(-120deg);
+  transform: rotateZ(-120deg);
 }
-#loading-box .SAO-wall-left {
-  -webkit-transform: rotateY(-90deg) translateZ(500px);
-  -moz-transform: rotateY(-90deg) translateZ(500px);
-  -o-transform: rotateY(-90deg) translateZ(500px);
-  -ms-transform: rotateY(-90deg) translateZ(500px);
-  transform: rotateY(-90deg) translateZ(500px);
+#ark-cab-box #ark-cab .ark-cab-bottom-right-triangle {
+  position: absolute;
+  display: block;
+  width: 260px;
+  height: 130px;
+  border-radius: 15px;
+  background: var(--ark-cab-border-color);
+  clip-path: polygon(50% 0, calc(50% - 75px) 0, calc(50% - 100px) 40px, calc(50% - 100px) 60px, 0 calc(100% - 17px), 0 100%, calc(50% - 72px) 30px, calc(50% + 72px) 30px, 100% 100%, 100% calc(100% - 17px), calc(50% + 100px) 60px, calc(50% + 100px) 40px, calc(50% + 75px) 0);
+  right: calc(50% - 460px);
+  top: calc(50% + 160px);
+  -webkit-transform: rotateZ(120deg);
+  -moz-transform: rotateZ(120deg);
+  -o-transform: rotateZ(120deg);
+  -ms-transform: rotateZ(120deg);
+  transform: rotateZ(120deg);
 }
-#loading-box .SAO-wall-top {
-  -webkit-transform: rotateX(90deg) translateZ(500px);
-  -moz-transform: rotateX(90deg) translateZ(500px);
-  -o-transform: rotateX(90deg) translateZ(500px);
-  -ms-transform: rotateX(90deg) translateZ(500px);
-  transform: rotateX(90deg) translateZ(500px);
+#ark-cab-box #ark-cab .ark-cab-center-left-border {
+  -webkit-box-ordinal-group: 1;
+  -moz-box-ordinal-group: 1;
+  -o-box-ordinal-group: 1;
+  -ms-flex-order: 1;
+  -webkit-order: 1;
+  order: 1;
+  position: relative;
+  width: 200px;
+  height: 60px;
 }
-#loading-box .SAO-wall-bottom {
-  -webkit-transform: rotateX(-90deg) translateZ(500px);
-  -moz-transform: rotateX(-90deg) translateZ(500px);
-  -o-transform: rotateX(-90deg) translateZ(500px);
-  -ms-transform: rotateX(-90deg) translateZ(500px);
-  transform: rotateX(-90deg) translateZ(500px);
+#ark-cab-box #ark-cab .ark-cab-center-left-border::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 200px;
+  height: 60px;
+  right: 0;
+  top: 0;
+  background: var(--ark-cab-border-color);
+  margin: 0 40px;
+  clip-path: polygon(0 calc(100% - 20px), 0 calc(100% - 23px), calc(100% - 80px) calc(100% - 23px), calc(100% - 50px) 30px, calc(100% - 20px) 30px, calc(100% - 20px) calc(100% - 20px), calc(100% - 10px) calc(100% - 20px), calc(100% - 10px) 0, 100% 0, 100% 100%, calc(100% - 10px) 100%, calc(100% - 10px) calc(100% - 20px));
+  -webkit-transform: skewX(-40deg);
+  -moz-transform: skewX(-40deg);
+  -o-transform: skewX(-40deg);
+  -ms-transform: skewX(-40deg);
+  transform: skewX(-40deg);
 }
-#loading-box .SAO-wall-back {
-  -webkit-transform: rotateX(180deg) translateZ(500px);
-  -moz-transform: rotateX(180deg) translateZ(500px);
-  -o-transform: rotateX(180deg) translateZ(500px);
-  -ms-transform: rotateX(180deg) translateZ(500px);
-  transform: rotateX(180deg) translateZ(500px);
+#ark-cab-box #ark-cab .ark-cab-center-left-border::after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 12px;
+  width: 30px;
+  top: 15px;
+  right: 55px;
+  clip-path: polygon(0 100%, 0 0, 17% 0, 17% 80%, 12% 100%, 20% 100%, 20% 0, 37% 0, 37% 80%, 32% 100%, 40% 100%, 40% 0, 57% 0, 57% 80%, 52% 100%, 60% 100%, 60% 0, 77% 0, 77% 80%, 72% 100%, 80% 100%, 80% 0, 97% 0, 97% 80%, 92% 100%);
+  -webkit-transform: skew(-40deg, 0deg);
+  -moz-transform: skew(-40deg, 0deg);
+  -o-transform: skew(-40deg, 0deg);
+  -ms-transform: skew(-40deg, 0deg);
+  transform: skew(-40deg, 0deg);
+  -webkit-animation: ark-cab-power-flash-left 3s ease infinite;
+  -moz-animation: ark-cab-power-flash-left 3s ease infinite;
+  -o-animation: ark-cab-power-flash-left 3s ease infinite;
+  -ms-animation: ark-cab-power-flash-left 3s ease infinite;
+  animation: ark-cab-power-flash-left 3s ease infinite;
 }
-@-moz-keyframes SAO-LKS-move {
-  0% {
-    -webkit-transform: translateZ(-500px) rotate(0deg);
-    -moz-transform: translateZ(-500px) rotate(0deg);
-    -o-transform: translateZ(-500px) rotate(0deg);
-    -ms-transform: translateZ(-500px) rotate(0deg);
-    transform: translateZ(-500px) rotate(0deg);
-  }
-  100% {
-    -webkit-transform: translateZ(500px) rotate(0deg);
-    -moz-transform: translateZ(500px) rotate(0deg);
-    -o-transform: translateZ(500px) rotate(0deg);
-    -ms-transform: translateZ(500px) rotate(0deg);
-    transform: translateZ(500px) rotate(0deg);
-  }
+#ark-cab-box #ark-cab .ark-cab-center-right-border {
+  -webkit-box-ordinal-group: 3;
+  -moz-box-ordinal-group: 3;
+  -o-box-ordinal-group: 3;
+  -ms-flex-order: 3;
+  -webkit-order: 3;
+  order: 3;
+  position: relative;
+  width: 200px;
+  height: 60px;
 }
-@-webkit-keyframes SAO-LKS-move {
-  0% {
-    -webkit-transform: translateZ(-500px) rotate(0deg);
-    -moz-transform: translateZ(-500px) rotate(0deg);
-    -o-transform: translateZ(-500px) rotate(0deg);
-    -ms-transform: translateZ(-500px) rotate(0deg);
-    transform: translateZ(-500px) rotate(0deg);
-  }
-  100% {
-    -webkit-transform: translateZ(500px) rotate(0deg);
-    -moz-transform: translateZ(500px) rotate(0deg);
-    -o-transform: translateZ(500px) rotate(0deg);
-    -ms-transform: translateZ(500px) rotate(0deg);
-    transform: translateZ(500px) rotate(0deg);
-  }
+#ark-cab-box #ark-cab .ark-cab-center-right-border::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 200px;
+  height: 60px;
+  left: 0;
+  top: 0;
+  background: var(--ark-cab-border-color);
+  margin: 0 40px;
+  clip-path: polygon(100% calc(100% - 20px), 100% calc(100% - 23px), 80px calc(100% - 23px), 50px 30px, 20px 30px, 20px calc(100% - 20px), 10px calc(100% - 20px), 10px 0, 0 0, 0 100%, 10px 100%, 10px calc(100% - 20px));
+  -webkit-transform: skewX(40deg);
+  -moz-transform: skewX(40deg);
+  -o-transform: skewX(40deg);
+  -ms-transform: skewX(40deg);
+  transform: skewX(40deg);
 }
-@-o-keyframes SAO-LKS-move {
-  0% {
-    -webkit-transform: translateZ(-500px) rotate(0deg);
-    -moz-transform: translateZ(-500px) rotate(0deg);
-    -o-transform: translateZ(-500px) rotate(0deg);
-    -ms-transform: translateZ(-500px) rotate(0deg);
-    transform: translateZ(-500px) rotate(0deg);
-  }
-  100% {
-    -webkit-transform: translateZ(500px) rotate(0deg);
-    -moz-transform: translateZ(500px) rotate(0deg);
-    -o-transform: translateZ(500px) rotate(0deg);
-    -ms-transform: translateZ(500px) rotate(0deg);
-    transform: translateZ(500px) rotate(0deg);
-  }
+#ark-cab-box #ark-cab .ark-cab-center-right-border::after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 12px;
+  width: 30px;
+  top: 15px;
+  left: 55px;
+  clip-path: polygon(100% 100%, 100% 0, 83% 0, 83% 80%, 88% 100%, 80% 100%, 80% 0, 63% 0, 63% 80%, 68% 100%, 60% 100%, 60% 0, 43% 0, 43% 80%, 48% 100%, 40% 100%, 40% 0, 23% 0, 23% 80%, 28% 100%, 20% 100%, 20% 0, 3% 0, 3% 80%, 8% 100%);
+  -webkit-transform: skew(40deg, 0deg);
+  -moz-transform: skew(40deg, 0deg);
+  -o-transform: skew(40deg, 0deg);
+  -ms-transform: skew(40deg, 0deg);
+  transform: skew(40deg, 0deg);
+  -webkit-animation: ark-cab-power-flash-right 3s ease infinite;
+  -moz-animation: ark-cab-power-flash-right 3s ease infinite;
+  -o-animation: ark-cab-power-flash-right 3s ease infinite;
+  -ms-animation: ark-cab-power-flash-right 3s ease infinite;
+  animation: ark-cab-power-flash-right 3s ease infinite;
 }
-@keyframes SAO-LKS-move {
-  0% {
-    -webkit-transform: translateZ(-500px) rotate(0deg);
-    -moz-transform: translateZ(-500px) rotate(0deg);
-    -o-transform: translateZ(-500px) rotate(0deg);
-    -ms-transform: translateZ(-500px) rotate(0deg);
-    transform: translateZ(-500px) rotate(0deg);
-  }
-  100% {
-    -webkit-transform: translateZ(500px) rotate(0deg);
-    -moz-transform: translateZ(500px) rotate(0deg);
-    -o-transform: translateZ(500px) rotate(0deg);
-    -ms-transform: translateZ(500px) rotate(0deg);
-    transform: translateZ(500px) rotate(0deg);
-  }
+#ark-cab-box #ark-cab .ark-cab-top-left-border {
+  position: absolute;
+  display: block;
+  height: 70px;
+  width: calc(50% - 160px);
+  background: var(--ark-cab-border-color);
+  left: 0;
+  bottom: calc(50% + 290px);
+  clip-path: polygon(100% 100%, 0 100%, 0 calc(100% - 3px), calc(100% - 160px) calc(100% - 5px), calc(100% - 150px) calc(100% - 10px), calc(100% - 15px) calc(100% - 10px), calc(100% - 15px) calc(100% - 30px), calc(100% - 1px) calc(100% - 40px), calc(100% - 1px) 0, 100% 0);
+  -webkit-transform: skew(-35deg, 10deg);
+  -moz-transform: skew(-35deg, 10deg);
+  -o-transform: skew(-35deg, 10deg);
+  -ms-transform: skew(-35deg, 10deg);
+  transform: skew(-35deg, 10deg);
 }
-@-moz-keyframes SAO-LKS-fade {
-  0% {
+#ark-cab-box #ark-cab .ark-cab-top-right-border {
+  position: absolute;
+  display: block;
+  height: 70px;
+  width: calc(50% - 160px);
+  background: var(--ark-cab-border-color);
+  right: 0;
+  bottom: calc(50% + 290px);
+  clip-path: polygon(0 100%, 100% 100%, 100% calc(100% - 3px), 160px calc(100% - 5px), 150px calc(100% - 10px), 15px calc(100% - 10px), 15px calc(100% - 30px), 1px calc(100% - 40px), 1px 0, 0 0);
+  -webkit-transform: skew(35deg, -10deg);
+  -moz-transform: skew(35deg, -10deg);
+  -o-transform: skew(35deg, -10deg);
+  -ms-transform: skew(35deg, -10deg);
+  transform: skew(35deg, -10deg);
+}
+#ark-cab-box #ark-cab .ark-cab-top-left-flash {
+  position: absolute;
+  display: block;
+  height: 12px;
+  width: 80px;
+  bottom: calc(50% + 320px);
+  left: calc(50% - 350px);
+  clip-path: polygon(0 100%, 0 0, 17% 0, 17% 80%, 12% 100%, 20% 100%, 20% 0, 37% 0, 37% 80%, 32% 100%, 40% 100%, 40% 0, 57% 0, 57% 80%, 52% 100%, 60% 100%, 60% 0, 77% 0, 77% 80%, 72% 100%, 80% 100%, 80% 0, 97% 0, 97% 80%, 92% 100%);
+  -webkit-transform: skew(-30deg, 10deg);
+  -moz-transform: skew(-30deg, 10deg);
+  -o-transform: skew(-30deg, 10deg);
+  -ms-transform: skew(-30deg, 10deg);
+  transform: skew(-30deg, 10deg);
+  -webkit-animation: ark-cab-power-flash-left 3s ease infinite;
+  -moz-animation: ark-cab-power-flash-left 3s ease infinite;
+  -o-animation: ark-cab-power-flash-left 3s ease infinite;
+  -ms-animation: ark-cab-power-flash-left 3s ease infinite;
+  animation: ark-cab-power-flash-left 3s ease infinite;
+}
+#ark-cab-box #ark-cab .ark-cab-top-right-flash {
+  position: absolute;
+  display: block;
+  height: 12px;
+  width: 80px;
+  bottom: calc(50% + 320px);
+  right: calc(50% - 350px);
+  clip-path: polygon(100% 100%, 100% 0, 83% 0, 83% 80%, 88% 100%, 80% 100%, 80% 0, 63% 0, 63% 80%, 68% 100%, 60% 100%, 60% 0, 43% 0, 43% 80%, 48% 100%, 40% 100%, 40% 0, 23% 0, 23% 80%, 28% 100%, 20% 100%, 20% 0, 3% 0, 3% 80%, 8% 100%);
+  -webkit-transform: skew(30deg, -10deg);
+  -moz-transform: skew(30deg, -10deg);
+  -o-transform: skew(30deg, -10deg);
+  -ms-transform: skew(30deg, -10deg);
+  transform: skew(30deg, -10deg);
+  -webkit-animation: ark-cab-power-flash-right 3s ease infinite;
+  -moz-animation: ark-cab-power-flash-right 3s ease infinite;
+  -o-animation: ark-cab-power-flash-right 3s ease infinite;
+  -ms-animation: ark-cab-power-flash-right 3s ease infinite;
+  animation: ark-cab-power-flash-right 3s ease infinite;
+}
+#ark-cab-box #ark-cab .ark-cab-bottom-center-border {
+  position: absolute;
+  top: calc(50% + 160px);
+  left: calc(50% - 250px);
+  display: block;
+  height: 50px;
+  width: 500px;
+  background: var(--ark-cab-border-color);
+  clip-path: polygon(0 15px, calc(50% - 100px) 0, calc(50% - 70px) calc(100% - 20px), calc(50% + 70px) calc(100% - 20px), calc(50% + 100px) 0, 100% 15px, calc(100% - 3px) 20px, calc(50% + 105px) 7px, calc(50% + 89px) calc(100% - 30px), calc(50% + 90px) calc(100% - 23px), calc(50% + 70px) 100%, calc(50% - 70px) 100%, calc(50% - 90px) calc(100% - 23px), calc(50% - 89px) calc(100% - 30px), calc(50% - 105px) 7px, 3px 20px, 0 15px);
+}
+#ark-cab-box #ark-cab .ark-cab-bottom-left-border {
+  position: absolute;
+  display: block;
+  height: 90px;
+  width: calc(50% - 430px);
+  background: var(--ark-cab-border-color);
+  left: 30px;
+  top: calc(50% + 260px);
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 15px), calc(100% - 8px) 100%, calc(100% - 6px) 30px, calc(100% - 12px) 32px, calc(100% - 11px) 10px, 10px 12px);
+  -webkit-transform: skew(30deg, -10deg);
+  -moz-transform: skew(30deg, -10deg);
+  -o-transform: skew(30deg, -10deg);
+  -ms-transform: skew(30deg, -10deg);
+  transform: skew(30deg, -10deg);
+}
+#ark-cab-box #ark-cab .ark-cab-bottom-right-border {
+  position: absolute;
+  display: block;
+  height: 90px;
+  width: calc(50% - 430px);
+  background: var(--ark-cab-border-color);
+  right: 30px;
+  top: calc(50% + 260px);
+  clip-path: polygon(100% 0, 0 0, 0 calc(100% - 15px), 8px 100%, 6px 30px, 12px 32px, 11px 10px, calc(100% - 10px) 12px);
+  -webkit-transform: skew(-30deg, 10deg);
+  -moz-transform: skew(-30deg, 10deg);
+  -o-transform: skew(-30deg, 10deg);
+  -ms-transform: skew(-30deg, 10deg);
+  transform: skew(-30deg, 10deg);
+}
+#ark-cab-box.arkend * {
+  -webkit-transition: all 1s ease-in 0.3s;
+  -moz-transition: all 1s ease-in 0.3s;
+  -o-transition: all 1s ease-in 0.3s;
+  -ms-transition: all 1s ease-in 0.3s;
+  transition: all 1s ease-in 0.3s;
+}
+#ark-cab-box.arkend #ark-cab {
+  background: rgba(20,20,20,0);
+  backdrop-filter: blur(0);
+  -webkit-transition: all 0.3s ease-in 0.7s;
+  -moz-transition: all 0.3s ease-in 0.7s;
+  -o-transition: all 0.3s ease-in 0.7s;
+  -ms-transition: all 0.3s ease-in 0.7s;
+  transition: all 0.3s ease-in 0.7s;
+}
+#ark-cab-box.arkend #ark-cab .ark-cab-top-left-flash {
+  -webkit-transform: skew(-30deg, 10deg) translateY(-1000px);
+  -moz-transform: skew(-30deg, 10deg) translateY(-1000px);
+  -o-transform: skew(-30deg, 10deg) translateY(-1000px);
+  -ms-transform: skew(-30deg, 10deg) translateY(-1000px);
+  transform: skew(-30deg, 10deg) translateY(-1000px);
+  -webkit-transition: -webkit-transform 0.3s ease-in 0.3s;
+  -moz-transition: -moz-transform 0.3s ease-in 0.3s;
+  -o-transition: -o-transform 0.3s ease-in 0.3s;
+  -ms-transition: -ms-transform 0.3s ease-in 0.3s;
+  transition: transform 0.3s ease-in 0.3s;
+}
+#ark-cab-box.arkend #ark-cab .ark-cab-top-right-flash {
+  -webkit-transform: skew(30deg, -10deg) translateY(-1000px);
+  -moz-transform: skew(30deg, -10deg) translateY(-1000px);
+  -o-transform: skew(30deg, -10deg) translateY(-1000px);
+  -ms-transform: skew(30deg, -10deg) translateY(-1000px);
+  transform: skew(30deg, -10deg) translateY(-1000px);
+  -webkit-transition: -webkit-transform 0.3s ease-in 0.3s;
+  -moz-transition: -moz-transform 0.3s ease-in 0.3s;
+  -o-transition: -o-transform 0.3s ease-in 0.3s;
+  -ms-transition: -ms-transform 0.3s ease-in 0.3s;
+  transition: transform 0.3s ease-in 0.3s;
+}
+#ark-cab-box.arkend #ark-cab .ark-cab-top-left-border {
+  -webkit-transform: skew(-35deg, 10deg) translateX(-1000px);
+  -moz-transform: skew(-35deg, 10deg) translateX(-1000px);
+  -o-transform: skew(-35deg, 10deg) translateX(-1000px);
+  -ms-transform: skew(-35deg, 10deg) translateX(-1000px);
+  transform: skew(-35deg, 10deg) translateX(-1000px);
+  -webkit-transition: -webkit-transform 0.3s ease-in 0.3s;
+  -moz-transition: -moz-transform 0.3s ease-in 0.3s;
+  -o-transition: -o-transform 0.3s ease-in 0.3s;
+  -ms-transition: -ms-transform 0.3s ease-in 0.3s;
+  transition: transform 0.3s ease-in 0.3s;
+}
+#ark-cab-box.arkend #ark-cab .ark-cab-top-right-border {
+  -webkit-transform: skew(35deg, -10deg) translateX(1000px);
+  -moz-transform: skew(35deg, -10deg) translateX(1000px);
+  -o-transform: skew(35deg, -10deg) translateX(1000px);
+  -ms-transform: skew(35deg, -10deg) translateX(1000px);
+  transform: skew(35deg, -10deg) translateX(1000px);
+  -webkit-transition: -webkit-transform 0.3s ease-in 0.3s;
+  -moz-transition: -moz-transform 0.3s ease-in 0.3s;
+  -o-transition: -o-transform 0.3s ease-in 0.3s;
+  -ms-transition: -ms-transform 0.3s ease-in 0.3s;
+  transition: transform 0.3s ease-in 0.3s;
+}
+#ark-cab-box.arkend #ark-cab .ark-cab-bottom-left-border {
+  -webkit-transform: skew(30deg, -10deg) translate3d(-3000px, 1000px, 0);
+  -moz-transform: skew(30deg, -10deg) translate3d(-3000px, 1000px, 0);
+  -o-transform: skew(30deg, -10deg) translate3d(-3000px, 1000px, 0);
+  -ms-transform: skew(30deg, -10deg) translate3d(-3000px, 1000px, 0);
+  transform: skew(30deg, -10deg) translate3d(-3000px, 1000px, 0);
+  -webkit-transition: -webkit-transform 0.3s ease-in 0.3s;
+  -moz-transition: -moz-transform 0.3s ease-in 0.3s;
+  -o-transition: -o-transform 0.3s ease-in 0.3s;
+  -ms-transition: -ms-transform 0.3s ease-in 0.3s;
+  transition: transform 0.3s ease-in 0.3s;
+}
+#ark-cab-box.arkend #ark-cab .ark-cab-bottom-right-border {
+  -webkit-transform: skew(-30deg, 10deg) translate3d(3000px, 1000px, 0);
+  -moz-transform: skew(-30deg, 10deg) translate3d(3000px, 1000px, 0);
+  -o-transform: skew(-30deg, 10deg) translate3d(3000px, 1000px, 0);
+  -ms-transform: skew(-30deg, 10deg) translate3d(3000px, 1000px, 0);
+  transform: skew(-30deg, 10deg) translate3d(3000px, 1000px, 0);
+  -webkit-transition: -webkit-transform 0.3s ease-in 0.3s;
+  -moz-transition: -moz-transform 0.3s ease-in 0.3s;
+  -o-transition: -o-transform 0.3s ease-in 0.3s;
+  -ms-transition: -ms-transform 0.3s ease-in 0.3s;
+  transition: transform 0.3s ease-in 0.3s;
+}
+#ark-cab-box.arkend #ark-cab .ark-cab-top-triangle {
+  -webkit-transform: translateY(-1000px);
+  -moz-transform: translateY(-1000px);
+  -o-transform: translateY(-1000px);
+  -ms-transform: translateY(-1000px);
+  transform: translateY(-1000px);
+  -webkit-transition: -webkit-transform 0.3s ease-in 0.4s;
+  -moz-transition: -moz-transform 0.3s ease-in 0.4s;
+  -o-transition: -o-transform 0.3s ease-in 0.4s;
+  -ms-transition: -ms-transform 0.3s ease-in 0.4s;
+  transition: transform 0.3s ease-in 0.4s;
+}
+#ark-cab-box.arkend #ark-cab .ark-cab-bottom-left-triangle {
+  -webkit-transform: rotateZ(-120deg) translate3d(-1000px, -2000px, 0);
+  -moz-transform: rotateZ(-120deg) translate3d(-1000px, -2000px, 0);
+  -o-transform: rotateZ(-120deg) translate3d(-1000px, -2000px, 0);
+  -ms-transform: rotateZ(-120deg) translate3d(-1000px, -2000px, 0);
+  transform: rotateZ(-120deg) translate3d(-1000px, -2000px, 0);
+  -webkit-transition: -webkit-transform 0.3s ease-in 0.4s;
+  -moz-transition: -moz-transform 0.3s ease-in 0.4s;
+  -o-transition: -o-transform 0.3s ease-in 0.4s;
+  -ms-transition: -ms-transform 0.3s ease-in 0.4s;
+  transition: transform 0.3s ease-in 0.4s;
+}
+#ark-cab-box.arkend #ark-cab .ark-cab-bottom-right-triangle {
+  -webkit-transform: rotateZ(120deg) translate3d(1000px, -2000px, 0);
+  -moz-transform: rotateZ(120deg) translate3d(1000px, -2000px, 0);
+  -o-transform: rotateZ(120deg) translate3d(1000px, -2000px, 0);
+  -ms-transform: rotateZ(120deg) translate3d(1000px, -2000px, 0);
+  transform: rotateZ(120deg) translate3d(1000px, -2000px, 0);
+  -webkit-transition: -webkit-transform 0.3s ease-in 0.4s;
+  -moz-transition: -moz-transform 0.3s ease-in 0.4s;
+  -o-transition: -o-transform 0.3s ease-in 0.4s;
+  -ms-transition: -ms-transform 0.3s ease-in 0.4s;
+  transition: transform 0.3s ease-in 0.4s;
+}
+#ark-cab-box.arkend #ark-cab .ark-cab-bottom-center-border {
+  -webkit-transform: translateY(1000px);
+  -moz-transform: translateY(1000px);
+  -o-transform: translateY(1000px);
+  -ms-transform: translateY(1000px);
+  transform: translateY(1000px);
+  -webkit-transition: -webkit-transform 0.4s ease-in 0.5s;
+  -moz-transition: -moz-transform 0.4s ease-in 0.5s;
+  -o-transition: -o-transform 0.4s ease-in 0.5s;
+  -ms-transition: -ms-transform 0.4s ease-in 0.5s;
+  transition: transform 0.4s ease-in 0.5s;
+}
+#ark-cab-box.arkend #ark-cab .ark-cab-center-left-border {
+  -webkit-transform: translateX(-1000px);
+  -moz-transform: translateX(-1000px);
+  -o-transform: translateX(-1000px);
+  -ms-transform: translateX(-1000px);
+  transform: translateX(-1000px);
+  -webkit-transition: -webkit-transform 0.4s ease-in 0.5s;
+  -moz-transition: -moz-transform 0.4s ease-in 0.5s;
+  -o-transition: -o-transform 0.4s ease-in 0.5s;
+  -ms-transition: -ms-transform 0.4s ease-in 0.5s;
+  transition: transform 0.4s ease-in 0.5s;
+}
+#ark-cab-box.arkend #ark-cab .ark-cab-center-right-border {
+  -webkit-transform: translateX(1000px);
+  -moz-transform: translateX(1000px);
+  -o-transform: translateX(1000px);
+  -ms-transform: translateX(1000px);
+  transform: translateX(1000px);
+  -webkit-transition: -webkit-transform 0.4s ease-in 0.5s;
+  -moz-transition: -moz-transform 0.4s ease-in 0.5s;
+  -o-transition: -o-transform 0.4s ease-in 0.5s;
+  -ms-transition: -ms-transform 0.4s ease-in 0.5s;
+  transition: transform 0.4s ease-in 0.5s;
+}
+#ark-cab-box.arkend #ark-cab .ark-cab-main-container {
+  clip-path: circle(0) !important;
+  -webkit-transition: clip-path 0.3s ease-in 0.7s;
+  -moz-transition: clip-path 0.3s ease-in 0.7s;
+  -o-transition: clip-path 0.3s ease-in 0.7s;
+  -ms-transition: clip-path 0.3s ease-in 0.7s;
+  transition: clip-path 0.3s ease-in 0.7s;
+}
+@-moz-keyframes ark-loading-flash {
+  from {
     opacity: 0;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
     filter: alpha(opacity=0);
   }
-  25% {
+  to {
     opacity: 1;
     -ms-filter: none;
     filter: none;
-  }
-  75% {
-    opacity: 1;
-    -ms-filter: none;
     filter: none;
-  }
-  100% {
-    opacity: 0;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-    filter: alpha(opacity=0);
   }
 }
-@-webkit-keyframes SAO-LKS-fade {
-  0% {
+@-webkit-keyframes ark-loading-flash {
+  from {
     opacity: 0;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
     filter: alpha(opacity=0);
   }
-  25% {
+  to {
     opacity: 1;
     -ms-filter: none;
     filter: none;
-  }
-  75% {
-    opacity: 1;
-    -ms-filter: none;
     filter: none;
-  }
-  100% {
-    opacity: 0;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-    filter: alpha(opacity=0);
   }
 }
-@-o-keyframes SAO-LKS-fade {
-  0% {
+@-o-keyframes ark-loading-flash {
+  from {
     opacity: 0;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
     filter: alpha(opacity=0);
   }
-  25% {
+  to {
     opacity: 1;
     -ms-filter: none;
     filter: none;
-  }
-  75% {
-    opacity: 1;
-    -ms-filter: none;
     filter: none;
-  }
-  100% {
-    opacity: 0;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-    filter: alpha(opacity=0);
   }
 }
-@keyframes SAO-LKS-fade {
-  0% {
+@keyframes ark-loading-flash {
+  from {
     opacity: 0;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
     filter: alpha(opacity=0);
   }
-  25% {
+  to {
     opacity: 1;
     -ms-filter: none;
     filter: none;
-  }
-  75% {
-    opacity: 1;
-    -ms-filter: none;
     filter: none;
   }
-  100% {
-    opacity: 0;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-    filter: alpha(opacity=0);
+}
+@-moz-keyframes ark-loading-rotate {
+  from {
+    -webkit-transform: rotateZ(0);
+    -moz-transform: rotateZ(0);
+    -o-transform: rotateZ(0);
+    -ms-transform: rotateZ(0);
+    transform: rotateZ(0);
+  }
+  to {
+    -webkit-transform: rotateZ(360deg);
+    -moz-transform: rotateZ(360deg);
+    -o-transform: rotateZ(360deg);
+    -ms-transform: rotateZ(360deg);
+    transform: rotateZ(360deg);
+  }
+}
+@-webkit-keyframes ark-loading-rotate {
+  from {
+    -webkit-transform: rotateZ(0);
+    -moz-transform: rotateZ(0);
+    -o-transform: rotateZ(0);
+    -ms-transform: rotateZ(0);
+    transform: rotateZ(0);
+  }
+  to {
+    -webkit-transform: rotateZ(360deg);
+    -moz-transform: rotateZ(360deg);
+    -o-transform: rotateZ(360deg);
+    -ms-transform: rotateZ(360deg);
+    transform: rotateZ(360deg);
+  }
+}
+@-o-keyframes ark-loading-rotate {
+  from {
+    -webkit-transform: rotateZ(0);
+    -moz-transform: rotateZ(0);
+    -o-transform: rotateZ(0);
+    -ms-transform: rotateZ(0);
+    transform: rotateZ(0);
+  }
+  to {
+    -webkit-transform: rotateZ(360deg);
+    -moz-transform: rotateZ(360deg);
+    -o-transform: rotateZ(360deg);
+    -ms-transform: rotateZ(360deg);
+    transform: rotateZ(360deg);
+  }
+}
+@keyframes ark-loading-rotate {
+  from {
+    -webkit-transform: rotateZ(0);
+    -moz-transform: rotateZ(0);
+    -o-transform: rotateZ(0);
+    -ms-transform: rotateZ(0);
+    transform: rotateZ(0);
+  }
+  to {
+    -webkit-transform: rotateZ(360deg);
+    -moz-transform: rotateZ(360deg);
+    -o-transform: rotateZ(360deg);
+    -ms-transform: rotateZ(360deg);
+    transform: rotateZ(360deg);
+  }
+}
+@-moz-keyframes ark-cab-power-flash-left {
+  from {
+    background: -webkit--webkit-linear-gradient(right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -webkit--moz-linear-gradient(right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -webkit--o-linear-gradient(right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -webkit--ms-linear-gradient(right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -webkit-linear-gradient(to left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -moz--webkit-linear-gradient(right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -moz--moz-linear-gradient(right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -moz--o-linear-gradient(right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -moz--ms-linear-gradient(right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -moz-linear-gradient(to left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -o--webkit-linear-gradient(right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -o--moz-linear-gradient(right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -o--o-linear-gradient(right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -o--ms-linear-gradient(right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -o-linear-gradient(to left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -ms--webkit-linear-gradient(right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -ms--moz-linear-gradient(right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -ms--o-linear-gradient(right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -ms--ms-linear-gradient(right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -ms-linear-gradient(to left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -webkit-linear-gradient(right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -moz-linear-gradient(right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -o-linear-gradient(right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -ms-linear-gradient(right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: linear-gradient(to left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+  }
+  to {
+    background: -webkit--webkit-linear-gradient(right, var(--ark-cab-border-color), transparent);
+    background: -webkit--moz-linear-gradient(right, var(--ark-cab-border-color), transparent);
+    background: -webkit--o-linear-gradient(right, var(--ark-cab-border-color), transparent);
+    background: -webkit--ms-linear-gradient(right, var(--ark-cab-border-color), transparent);
+    background: -webkit-linear-gradient(to left, var(--ark-cab-border-color), transparent);
+    background: -moz--webkit-linear-gradient(right, var(--ark-cab-border-color), transparent);
+    background: -moz--moz-linear-gradient(right, var(--ark-cab-border-color), transparent);
+    background: -moz--o-linear-gradient(right, var(--ark-cab-border-color), transparent);
+    background: -moz--ms-linear-gradient(right, var(--ark-cab-border-color), transparent);
+    background: -moz-linear-gradient(to left, var(--ark-cab-border-color), transparent);
+    background: -o--webkit-linear-gradient(right, var(--ark-cab-border-color), transparent);
+    background: -o--moz-linear-gradient(right, var(--ark-cab-border-color), transparent);
+    background: -o--o-linear-gradient(right, var(--ark-cab-border-color), transparent);
+    background: -o--ms-linear-gradient(right, var(--ark-cab-border-color), transparent);
+    background: -o-linear-gradient(to left, var(--ark-cab-border-color), transparent);
+    background: -ms--webkit-linear-gradient(right, var(--ark-cab-border-color), transparent);
+    background: -ms--moz-linear-gradient(right, var(--ark-cab-border-color), transparent);
+    background: -ms--o-linear-gradient(right, var(--ark-cab-border-color), transparent);
+    background: -ms--ms-linear-gradient(right, var(--ark-cab-border-color), transparent);
+    background: -ms-linear-gradient(to left, var(--ark-cab-border-color), transparent);
+    background: -webkit-linear-gradient(right, var(--ark-cab-border-color), transparent);
+    background: -moz-linear-gradient(right, var(--ark-cab-border-color), transparent);
+    background: -o-linear-gradient(right, var(--ark-cab-border-color), transparent);
+    background: -ms-linear-gradient(right, var(--ark-cab-border-color), transparent);
+    background: linear-gradient(to left, var(--ark-cab-border-color), transparent);
+  }
+}
+@-webkit-keyframes ark-cab-power-flash-left {
+  from {
+    background: -webkit--webkit-linear-gradient(right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -webkit--moz-linear-gradient(right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -webkit--o-linear-gradient(right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -webkit--ms-linear-gradient(right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -webkit-linear-gradient(to left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -moz--webkit-linear-gradient(right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -moz--moz-linear-gradient(right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -moz--o-linear-gradient(right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -moz--ms-linear-gradient(right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -moz-linear-gradient(to left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -o--webkit-linear-gradient(right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -o--moz-linear-gradient(right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -o--o-linear-gradient(right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -o--ms-linear-gradient(right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -o-linear-gradient(to left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -ms--webkit-linear-gradient(right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -ms--moz-linear-gradient(right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -ms--o-linear-gradient(right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -ms--ms-linear-gradient(right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -ms-linear-gradient(to left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -webkit-linear-gradient(right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -moz-linear-gradient(right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -o-linear-gradient(right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -ms-linear-gradient(right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: linear-gradient(to left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+  }
+  to {
+    background: -webkit--webkit-linear-gradient(right, var(--ark-cab-border-color), transparent);
+    background: -webkit--moz-linear-gradient(right, var(--ark-cab-border-color), transparent);
+    background: -webkit--o-linear-gradient(right, var(--ark-cab-border-color), transparent);
+    background: -webkit--ms-linear-gradient(right, var(--ark-cab-border-color), transparent);
+    background: -webkit-linear-gradient(to left, var(--ark-cab-border-color), transparent);
+    background: -moz--webkit-linear-gradient(right, var(--ark-cab-border-color), transparent);
+    background: -moz--moz-linear-gradient(right, var(--ark-cab-border-color), transparent);
+    background: -moz--o-linear-gradient(right, var(--ark-cab-border-color), transparent);
+    background: -moz--ms-linear-gradient(right, var(--ark-cab-border-color), transparent);
+    background: -moz-linear-gradient(to left, var(--ark-cab-border-color), transparent);
+    background: -o--webkit-linear-gradient(right, var(--ark-cab-border-color), transparent);
+    background: -o--moz-linear-gradient(right, var(--ark-cab-border-color), transparent);
+    background: -o--o-linear-gradient(right, var(--ark-cab-border-color), transparent);
+    background: -o--ms-linear-gradient(right, var(--ark-cab-border-color), transparent);
+    background: -o-linear-gradient(to left, var(--ark-cab-border-color), transparent);
+    background: -ms--webkit-linear-gradient(right, var(--ark-cab-border-color), transparent);
+    background: -ms--moz-linear-gradient(right, var(--ark-cab-border-color), transparent);
+    background: -ms--o-linear-gradient(right, var(--ark-cab-border-color), transparent);
+    background: -ms--ms-linear-gradient(right, var(--ark-cab-border-color), transparent);
+    background: -ms-linear-gradient(to left, var(--ark-cab-border-color), transparent);
+    background: -webkit-linear-gradient(right, var(--ark-cab-border-color), transparent);
+    background: -moz-linear-gradient(right, var(--ark-cab-border-color), transparent);
+    background: -o-linear-gradient(right, var(--ark-cab-border-color), transparent);
+    background: -ms-linear-gradient(right, var(--ark-cab-border-color), transparent);
+    background: linear-gradient(to left, var(--ark-cab-border-color), transparent);
+  }
+}
+@-o-keyframes ark-cab-power-flash-left {
+  from {
+    background: -webkit--webkit-linear-gradient(right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -webkit--moz-linear-gradient(right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -webkit--o-linear-gradient(right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -webkit--ms-linear-gradient(right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -webkit-linear-gradient(to left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -moz--webkit-linear-gradient(right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -moz--moz-linear-gradient(right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -moz--o-linear-gradient(right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -moz--ms-linear-gradient(right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -moz-linear-gradient(to left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -o--webkit-linear-gradient(right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -o--moz-linear-gradient(right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -o--o-linear-gradient(right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -o--ms-linear-gradient(right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -o-linear-gradient(to left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -ms--webkit-linear-gradient(right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -ms--moz-linear-gradient(right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -ms--o-linear-gradient(right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -ms--ms-linear-gradient(right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -ms-linear-gradient(to left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -webkit-linear-gradient(right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -moz-linear-gradient(right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -o-linear-gradient(right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -ms-linear-gradient(right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: linear-gradient(to left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+  }
+  to {
+    background: -webkit--webkit-linear-gradient(right, var(--ark-cab-border-color), transparent);
+    background: -webkit--moz-linear-gradient(right, var(--ark-cab-border-color), transparent);
+    background: -webkit--o-linear-gradient(right, var(--ark-cab-border-color), transparent);
+    background: -webkit--ms-linear-gradient(right, var(--ark-cab-border-color), transparent);
+    background: -webkit-linear-gradient(to left, var(--ark-cab-border-color), transparent);
+    background: -moz--webkit-linear-gradient(right, var(--ark-cab-border-color), transparent);
+    background: -moz--moz-linear-gradient(right, var(--ark-cab-border-color), transparent);
+    background: -moz--o-linear-gradient(right, var(--ark-cab-border-color), transparent);
+    background: -moz--ms-linear-gradient(right, var(--ark-cab-border-color), transparent);
+    background: -moz-linear-gradient(to left, var(--ark-cab-border-color), transparent);
+    background: -o--webkit-linear-gradient(right, var(--ark-cab-border-color), transparent);
+    background: -o--moz-linear-gradient(right, var(--ark-cab-border-color), transparent);
+    background: -o--o-linear-gradient(right, var(--ark-cab-border-color), transparent);
+    background: -o--ms-linear-gradient(right, var(--ark-cab-border-color), transparent);
+    background: -o-linear-gradient(to left, var(--ark-cab-border-color), transparent);
+    background: -ms--webkit-linear-gradient(right, var(--ark-cab-border-color), transparent);
+    background: -ms--moz-linear-gradient(right, var(--ark-cab-border-color), transparent);
+    background: -ms--o-linear-gradient(right, var(--ark-cab-border-color), transparent);
+    background: -ms--ms-linear-gradient(right, var(--ark-cab-border-color), transparent);
+    background: -ms-linear-gradient(to left, var(--ark-cab-border-color), transparent);
+    background: -webkit-linear-gradient(right, var(--ark-cab-border-color), transparent);
+    background: -moz-linear-gradient(right, var(--ark-cab-border-color), transparent);
+    background: -o-linear-gradient(right, var(--ark-cab-border-color), transparent);
+    background: -ms-linear-gradient(right, var(--ark-cab-border-color), transparent);
+    background: linear-gradient(to left, var(--ark-cab-border-color), transparent);
+  }
+}
+@keyframes ark-cab-power-flash-left {
+  from {
+    background: -webkit--webkit-linear-gradient(right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -webkit--moz-linear-gradient(right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -webkit--o-linear-gradient(right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -webkit--ms-linear-gradient(right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -webkit-linear-gradient(to left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -moz--webkit-linear-gradient(right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -moz--moz-linear-gradient(right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -moz--o-linear-gradient(right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -moz--ms-linear-gradient(right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -moz-linear-gradient(to left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -o--webkit-linear-gradient(right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -o--moz-linear-gradient(right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -o--o-linear-gradient(right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -o--ms-linear-gradient(right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -o-linear-gradient(to left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -ms--webkit-linear-gradient(right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -ms--moz-linear-gradient(right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -ms--o-linear-gradient(right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -ms--ms-linear-gradient(right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -ms-linear-gradient(to left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -webkit-linear-gradient(right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -moz-linear-gradient(right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -o-linear-gradient(right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -ms-linear-gradient(right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: linear-gradient(to left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+  }
+  to {
+    background: -webkit--webkit-linear-gradient(right, var(--ark-cab-border-color), transparent);
+    background: -webkit--moz-linear-gradient(right, var(--ark-cab-border-color), transparent);
+    background: -webkit--o-linear-gradient(right, var(--ark-cab-border-color), transparent);
+    background: -webkit--ms-linear-gradient(right, var(--ark-cab-border-color), transparent);
+    background: -webkit-linear-gradient(to left, var(--ark-cab-border-color), transparent);
+    background: -moz--webkit-linear-gradient(right, var(--ark-cab-border-color), transparent);
+    background: -moz--moz-linear-gradient(right, var(--ark-cab-border-color), transparent);
+    background: -moz--o-linear-gradient(right, var(--ark-cab-border-color), transparent);
+    background: -moz--ms-linear-gradient(right, var(--ark-cab-border-color), transparent);
+    background: -moz-linear-gradient(to left, var(--ark-cab-border-color), transparent);
+    background: -o--webkit-linear-gradient(right, var(--ark-cab-border-color), transparent);
+    background: -o--moz-linear-gradient(right, var(--ark-cab-border-color), transparent);
+    background: -o--o-linear-gradient(right, var(--ark-cab-border-color), transparent);
+    background: -o--ms-linear-gradient(right, var(--ark-cab-border-color), transparent);
+    background: -o-linear-gradient(to left, var(--ark-cab-border-color), transparent);
+    background: -ms--webkit-linear-gradient(right, var(--ark-cab-border-color), transparent);
+    background: -ms--moz-linear-gradient(right, var(--ark-cab-border-color), transparent);
+    background: -ms--o-linear-gradient(right, var(--ark-cab-border-color), transparent);
+    background: -ms--ms-linear-gradient(right, var(--ark-cab-border-color), transparent);
+    background: -ms-linear-gradient(to left, var(--ark-cab-border-color), transparent);
+    background: -webkit-linear-gradient(right, var(--ark-cab-border-color), transparent);
+    background: -moz-linear-gradient(right, var(--ark-cab-border-color), transparent);
+    background: -o-linear-gradient(right, var(--ark-cab-border-color), transparent);
+    background: -ms-linear-gradient(right, var(--ark-cab-border-color), transparent);
+    background: linear-gradient(to left, var(--ark-cab-border-color), transparent);
+  }
+}
+@-moz-keyframes ark-cab-power-flash-right {
+  from {
+    background: -webkit--webkit-linear-gradient(left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -webkit--moz-linear-gradient(left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -webkit--o-linear-gradient(left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -webkit--ms-linear-gradient(left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -webkit-linear-gradient(to right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -moz--webkit-linear-gradient(left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -moz--moz-linear-gradient(left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -moz--o-linear-gradient(left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -moz--ms-linear-gradient(left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -moz-linear-gradient(to right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -o--webkit-linear-gradient(left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -o--moz-linear-gradient(left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -o--o-linear-gradient(left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -o--ms-linear-gradient(left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -o-linear-gradient(to right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -ms--webkit-linear-gradient(left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -ms--moz-linear-gradient(left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -ms--o-linear-gradient(left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -ms--ms-linear-gradient(left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -ms-linear-gradient(to right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -webkit-linear-gradient(left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -moz-linear-gradient(left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -o-linear-gradient(left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -ms-linear-gradient(left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: linear-gradient(to right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+  }
+  to {
+    background: -webkit--webkit-linear-gradient(left, var(--ark-cab-border-color), transparent);
+    background: -webkit--moz-linear-gradient(left, var(--ark-cab-border-color), transparent);
+    background: -webkit--o-linear-gradient(left, var(--ark-cab-border-color), transparent);
+    background: -webkit--ms-linear-gradient(left, var(--ark-cab-border-color), transparent);
+    background: -webkit-linear-gradient(to right, var(--ark-cab-border-color), transparent);
+    background: -moz--webkit-linear-gradient(left, var(--ark-cab-border-color), transparent);
+    background: -moz--moz-linear-gradient(left, var(--ark-cab-border-color), transparent);
+    background: -moz--o-linear-gradient(left, var(--ark-cab-border-color), transparent);
+    background: -moz--ms-linear-gradient(left, var(--ark-cab-border-color), transparent);
+    background: -moz-linear-gradient(to right, var(--ark-cab-border-color), transparent);
+    background: -o--webkit-linear-gradient(left, var(--ark-cab-border-color), transparent);
+    background: -o--moz-linear-gradient(left, var(--ark-cab-border-color), transparent);
+    background: -o--o-linear-gradient(left, var(--ark-cab-border-color), transparent);
+    background: -o--ms-linear-gradient(left, var(--ark-cab-border-color), transparent);
+    background: -o-linear-gradient(to right, var(--ark-cab-border-color), transparent);
+    background: -ms--webkit-linear-gradient(left, var(--ark-cab-border-color), transparent);
+    background: -ms--moz-linear-gradient(left, var(--ark-cab-border-color), transparent);
+    background: -ms--o-linear-gradient(left, var(--ark-cab-border-color), transparent);
+    background: -ms--ms-linear-gradient(left, var(--ark-cab-border-color), transparent);
+    background: -ms-linear-gradient(to right, var(--ark-cab-border-color), transparent);
+    background: -webkit-linear-gradient(left, var(--ark-cab-border-color), transparent);
+    background: -moz-linear-gradient(left, var(--ark-cab-border-color), transparent);
+    background: -o-linear-gradient(left, var(--ark-cab-border-color), transparent);
+    background: -ms-linear-gradient(left, var(--ark-cab-border-color), transparent);
+    background: linear-gradient(to right, var(--ark-cab-border-color), transparent);
+  }
+}
+@-webkit-keyframes ark-cab-power-flash-right {
+  from {
+    background: -webkit--webkit-linear-gradient(left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -webkit--moz-linear-gradient(left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -webkit--o-linear-gradient(left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -webkit--ms-linear-gradient(left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -webkit-linear-gradient(to right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -moz--webkit-linear-gradient(left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -moz--moz-linear-gradient(left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -moz--o-linear-gradient(left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -moz--ms-linear-gradient(left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -moz-linear-gradient(to right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -o--webkit-linear-gradient(left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -o--moz-linear-gradient(left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -o--o-linear-gradient(left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -o--ms-linear-gradient(left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -o-linear-gradient(to right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -ms--webkit-linear-gradient(left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -ms--moz-linear-gradient(left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -ms--o-linear-gradient(left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -ms--ms-linear-gradient(left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -ms-linear-gradient(to right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -webkit-linear-gradient(left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -moz-linear-gradient(left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -o-linear-gradient(left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -ms-linear-gradient(left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: linear-gradient(to right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+  }
+  to {
+    background: -webkit--webkit-linear-gradient(left, var(--ark-cab-border-color), transparent);
+    background: -webkit--moz-linear-gradient(left, var(--ark-cab-border-color), transparent);
+    background: -webkit--o-linear-gradient(left, var(--ark-cab-border-color), transparent);
+    background: -webkit--ms-linear-gradient(left, var(--ark-cab-border-color), transparent);
+    background: -webkit-linear-gradient(to right, var(--ark-cab-border-color), transparent);
+    background: -moz--webkit-linear-gradient(left, var(--ark-cab-border-color), transparent);
+    background: -moz--moz-linear-gradient(left, var(--ark-cab-border-color), transparent);
+    background: -moz--o-linear-gradient(left, var(--ark-cab-border-color), transparent);
+    background: -moz--ms-linear-gradient(left, var(--ark-cab-border-color), transparent);
+    background: -moz-linear-gradient(to right, var(--ark-cab-border-color), transparent);
+    background: -o--webkit-linear-gradient(left, var(--ark-cab-border-color), transparent);
+    background: -o--moz-linear-gradient(left, var(--ark-cab-border-color), transparent);
+    background: -o--o-linear-gradient(left, var(--ark-cab-border-color), transparent);
+    background: -o--ms-linear-gradient(left, var(--ark-cab-border-color), transparent);
+    background: -o-linear-gradient(to right, var(--ark-cab-border-color), transparent);
+    background: -ms--webkit-linear-gradient(left, var(--ark-cab-border-color), transparent);
+    background: -ms--moz-linear-gradient(left, var(--ark-cab-border-color), transparent);
+    background: -ms--o-linear-gradient(left, var(--ark-cab-border-color), transparent);
+    background: -ms--ms-linear-gradient(left, var(--ark-cab-border-color), transparent);
+    background: -ms-linear-gradient(to right, var(--ark-cab-border-color), transparent);
+    background: -webkit-linear-gradient(left, var(--ark-cab-border-color), transparent);
+    background: -moz-linear-gradient(left, var(--ark-cab-border-color), transparent);
+    background: -o-linear-gradient(left, var(--ark-cab-border-color), transparent);
+    background: -ms-linear-gradient(left, var(--ark-cab-border-color), transparent);
+    background: linear-gradient(to right, var(--ark-cab-border-color), transparent);
+  }
+}
+@-o-keyframes ark-cab-power-flash-right {
+  from {
+    background: -webkit--webkit-linear-gradient(left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -webkit--moz-linear-gradient(left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -webkit--o-linear-gradient(left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -webkit--ms-linear-gradient(left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -webkit-linear-gradient(to right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -moz--webkit-linear-gradient(left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -moz--moz-linear-gradient(left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -moz--o-linear-gradient(left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -moz--ms-linear-gradient(left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -moz-linear-gradient(to right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -o--webkit-linear-gradient(left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -o--moz-linear-gradient(left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -o--o-linear-gradient(left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -o--ms-linear-gradient(left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -o-linear-gradient(to right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -ms--webkit-linear-gradient(left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -ms--moz-linear-gradient(left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -ms--o-linear-gradient(left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -ms--ms-linear-gradient(left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -ms-linear-gradient(to right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -webkit-linear-gradient(left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -moz-linear-gradient(left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -o-linear-gradient(left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -ms-linear-gradient(left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: linear-gradient(to right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+  }
+  to {
+    background: -webkit--webkit-linear-gradient(left, var(--ark-cab-border-color), transparent);
+    background: -webkit--moz-linear-gradient(left, var(--ark-cab-border-color), transparent);
+    background: -webkit--o-linear-gradient(left, var(--ark-cab-border-color), transparent);
+    background: -webkit--ms-linear-gradient(left, var(--ark-cab-border-color), transparent);
+    background: -webkit-linear-gradient(to right, var(--ark-cab-border-color), transparent);
+    background: -moz--webkit-linear-gradient(left, var(--ark-cab-border-color), transparent);
+    background: -moz--moz-linear-gradient(left, var(--ark-cab-border-color), transparent);
+    background: -moz--o-linear-gradient(left, var(--ark-cab-border-color), transparent);
+    background: -moz--ms-linear-gradient(left, var(--ark-cab-border-color), transparent);
+    background: -moz-linear-gradient(to right, var(--ark-cab-border-color), transparent);
+    background: -o--webkit-linear-gradient(left, var(--ark-cab-border-color), transparent);
+    background: -o--moz-linear-gradient(left, var(--ark-cab-border-color), transparent);
+    background: -o--o-linear-gradient(left, var(--ark-cab-border-color), transparent);
+    background: -o--ms-linear-gradient(left, var(--ark-cab-border-color), transparent);
+    background: -o-linear-gradient(to right, var(--ark-cab-border-color), transparent);
+    background: -ms--webkit-linear-gradient(left, var(--ark-cab-border-color), transparent);
+    background: -ms--moz-linear-gradient(left, var(--ark-cab-border-color), transparent);
+    background: -ms--o-linear-gradient(left, var(--ark-cab-border-color), transparent);
+    background: -ms--ms-linear-gradient(left, var(--ark-cab-border-color), transparent);
+    background: -ms-linear-gradient(to right, var(--ark-cab-border-color), transparent);
+    background: -webkit-linear-gradient(left, var(--ark-cab-border-color), transparent);
+    background: -moz-linear-gradient(left, var(--ark-cab-border-color), transparent);
+    background: -o-linear-gradient(left, var(--ark-cab-border-color), transparent);
+    background: -ms-linear-gradient(left, var(--ark-cab-border-color), transparent);
+    background: linear-gradient(to right, var(--ark-cab-border-color), transparent);
+  }
+}
+@keyframes ark-cab-power-flash-right {
+  from {
+    background: -webkit--webkit-linear-gradient(left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -webkit--moz-linear-gradient(left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -webkit--o-linear-gradient(left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -webkit--ms-linear-gradient(left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -webkit-linear-gradient(to right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -moz--webkit-linear-gradient(left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -moz--moz-linear-gradient(left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -moz--o-linear-gradient(left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -moz--ms-linear-gradient(left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -moz-linear-gradient(to right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -o--webkit-linear-gradient(left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -o--moz-linear-gradient(left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -o--o-linear-gradient(left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -o--ms-linear-gradient(left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -o-linear-gradient(to right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -ms--webkit-linear-gradient(left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -ms--moz-linear-gradient(left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -ms--o-linear-gradient(left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -ms--ms-linear-gradient(left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -ms-linear-gradient(to right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -webkit-linear-gradient(left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -moz-linear-gradient(left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -o-linear-gradient(left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: -ms-linear-gradient(left, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+    background: linear-gradient(to right, transparent, transparent 20%, var(--ark-cab-border-color) 21%, transparent);
+  }
+  to {
+    background: -webkit--webkit-linear-gradient(left, var(--ark-cab-border-color), transparent);
+    background: -webkit--moz-linear-gradient(left, var(--ark-cab-border-color), transparent);
+    background: -webkit--o-linear-gradient(left, var(--ark-cab-border-color), transparent);
+    background: -webkit--ms-linear-gradient(left, var(--ark-cab-border-color), transparent);
+    background: -webkit-linear-gradient(to right, var(--ark-cab-border-color), transparent);
+    background: -moz--webkit-linear-gradient(left, var(--ark-cab-border-color), transparent);
+    background: -moz--moz-linear-gradient(left, var(--ark-cab-border-color), transparent);
+    background: -moz--o-linear-gradient(left, var(--ark-cab-border-color), transparent);
+    background: -moz--ms-linear-gradient(left, var(--ark-cab-border-color), transparent);
+    background: -moz-linear-gradient(to right, var(--ark-cab-border-color), transparent);
+    background: -o--webkit-linear-gradient(left, var(--ark-cab-border-color), transparent);
+    background: -o--moz-linear-gradient(left, var(--ark-cab-border-color), transparent);
+    background: -o--o-linear-gradient(left, var(--ark-cab-border-color), transparent);
+    background: -o--ms-linear-gradient(left, var(--ark-cab-border-color), transparent);
+    background: -o-linear-gradient(to right, var(--ark-cab-border-color), transparent);
+    background: -ms--webkit-linear-gradient(left, var(--ark-cab-border-color), transparent);
+    background: -ms--moz-linear-gradient(left, var(--ark-cab-border-color), transparent);
+    background: -ms--o-linear-gradient(left, var(--ark-cab-border-color), transparent);
+    background: -ms--ms-linear-gradient(left, var(--ark-cab-border-color), transparent);
+    background: -ms-linear-gradient(to right, var(--ark-cab-border-color), transparent);
+    background: -webkit-linear-gradient(left, var(--ark-cab-border-color), transparent);
+    background: -moz-linear-gradient(left, var(--ark-cab-border-color), transparent);
+    background: -o-linear-gradient(left, var(--ark-cab-border-color), transparent);
+    background: -ms-linear-gradient(left, var(--ark-cab-border-color), transparent);
+    background: linear-gradient(to right, var(--ark-cab-border-color), transparent);
   }
 }
 :root {
