@@ -26,14 +26,18 @@ function ark_menu_link(e) {
     }
     ), 500)
 }
+
 setTime(),
 setInterval(setTime, 1e3),
-document.getElementById("ark-menu-start-btn").addEventListener("click", (()=>{
+    document.getElementById("ark-menu-start-btn").addEventListener("click", (()=>{
     document.getElementById("ark-cab-box").classList.remove("arksink"),
     document.getElementById("ark-menu-box").classList.remove("arksink"),
     document.getElementById("ark-cab-box").classList.remove("arkend"),
-    document.getElementById("ark-menu-box").classList.remove("arkend")
+    document.getElementById("ark-menu-box").classList.remove("arkend"),
+    document.getElementById("ark_cab_top_triangle").style = "position: unset;display: block;width: auto;height: auto;border-radius: 15px;clip-path: unset;background: unset;"
 }
+
+
 )),
 document.getElementById("ark-menu-end-btn").addEventListener("click", (()=>{
     document.getElementById("ark-cab-box").classList.add("arkend"),
@@ -42,6 +46,7 @@ document.getElementById("ark-menu-end-btn").addEventListener("click", (()=>{
         document.getElementById("ark-menu-box").classList.add("arksink"),
         document.getElementById("ark-cab-box").classList.add("arksink")
     }
-    ), 1800)
+    ), 1800),
+    document.getElementById("ark_cab_top_triangle").style = ""
 }
 ));

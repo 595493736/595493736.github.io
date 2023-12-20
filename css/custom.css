@@ -78,3 +78,15 @@ div#category{
   #page-header::before{
     background: transparent!important;
   }
+.announcement_content {
+  color: #fff!important;
+}
+.card-announcement span {
+  color: #fff!important;
+}
+.card-category-list span {
+  color: #fff!important;
+}
+.card-archive-list span {
+  color: #fff!important;
+}

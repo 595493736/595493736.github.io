@@ -15,13 +15,13 @@ var swiper = new Swiper('.blog-slider', {
   }
 });
 
-var comtainer = document.getElementById('swiper_container');
-comtainer.onmouseenter = function() {
-  swiper.autoplay.stop();
-};
-comtainer.onmouseleave = function() {
-  swiper.autoplay.start();
-}
+// var comtainer = document.getElementById('swiper_container');
+// comtainer.onmouseenter = function() {
+//   swiper.autoplay.stop();
+// };
+// comtainer.onmouseleave = function() {
+//   swiper.autoplay.start();
+// }
 
 //首页顶部推荐文章轮播图
 var ark_swiper = new Swiper("#ark-swiper-container", {
@@ -63,3 +63,21 @@ var ark_footer_swiper = new Swiper("#ark-footer-bdage-container", {
     pauseOnMouseEnter: true, //鼠标进入停止切换，离开恢复切换
   },
 });
+
+var ark_menu_first_swiper = new Swiper(".menu-item-container",{
+    direction: "horizontal",
+    loop: !0,
+    updateOnWindowResize: !0,
+    grabCursor: !0,
+    slidesPerView: 1,
+    spaceBetween: 10,
+    mousewheel: !0,
+    pagination: {
+        el: ".ark-menu-pagination",
+        clickable: !0
+    },
+    autoplay: {
+        delay: 3000,
+        pauseOnMouseEnter: !0
+    }
+})

@@ -17,7 +17,7 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Update Diary</title>
+    <title>更新记录</title>
     <link href="http://example.com/2021/02/24/Update-Diary/"/>
     <id>http://example.com/2021/02/24/Update-Diary/</id>
     <published>2021-02-24T07:55:44.000Z</published>
@@ -40,7 +40,7 @@
   </entry>
   
   <entry>
-    <title>Tag Plugins Plus</title>
+    <title>外挂标签引入</title>
     <link href="http://example.com/2020/11/14/Tag-Plugins-Plus/"/>
     <id>http://example.com/2020/11/14/Tag-Plugins-Plus/</id>
     <published>2020-11-14T07:55:44.000Z</published>

@@ -3137,7 +3137,7 @@ blockquote footer cite:before {
   left: 10px;
 }
 .card-widget:not(.card-info) .item-headline:after {
-  content: "skei";
+  content: "Skei";
   position: absolute;
   bottom: 0;
   font-size: 12px;
@@ -3695,10 +3695,10 @@ blockquote footer cite:before {
   -ms-flex-direction: column;
   flex-direction: column;
 }
-.recent-post-item#gitcalendarBar {
+.recent-post-item#gitcalendar {
   background: transparent !important;
 }
-.recent-post-item#gitcalendarBar div#git_container {
+.recent-post-item#gitcalendar div#git_container {
   background: var(--ark-post-item-background);
   border-radius: 15px;
 }
@@ -4361,11 +4361,11 @@ blockquote footer cite:before {
   -webkit-line-clamp: 4;
 }
 @media screen and (min-width: 900px) {
-  .recent-post-item#gitcalendarBar {
+  .recent-post-item#gitcalendar {
     position: relative;
     padding: 30px 30px !important;
   }
-  .recent-post-item#gitcalendarBar::before {
+  .recent-post-item#gitcalendar::before {
     width: 100%;
     z-index: 3;
     height: 100%;
@@ -4607,6 +4607,805 @@ blockquote footer cite:before {
     height: 200px;
     margin: 40px 0;
     width: 70%;
+  }
+}
+:root {
+  --ark-menu-background: rgba(80,80,80,0.4);
+  --ark-menu-border: rgba(153,54,44,0.8);
+}
+[data-theme="dark"] {
+  --ark-menu-background: rgba(61,147,204,0.4);
+  --ark-menu-border: rgba(153,54,44,0.8);
+}
+#ark-menu-box {
+  position: fixed;
+  z-index: 1001;
+  width: 100vw;
+  height: 100vh;
+  margin: 0px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -o-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -o-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+#ark-menu-box * {
+  -webkit-transition: all 0.5s linear 0s;
+  -moz-transition: all 0.5s linear 0s;
+  -o-transition: all 0.5s linear 0s;
+  -ms-transition: all 0.5s linear 0s;
+  transition: all 0.5s linear 0s;
+}
+#ark-menu-box.arksink {
+  z-index: -1000;
+}
+#ark-menu-box .ark-menu-horizontal-left {
+  display: block;
+  position: fixed;
+  left: calc(50% - 550px);
+  top: calc(50% - 200px);
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+  filter: none;
+  -webkit-transition: opacity 0.3s linear 0s;
+  -moz-transition: opacity 0.3s linear 0s;
+  -o-transition: opacity 0.3s linear 0s;
+  -ms-transition: opacity 0.3s linear 0s;
+  transition: opacity 0.3s linear 0s;
+}
+#ark-menu-box .ark-menu-horizontal-left .ark-menu-horizontal-left-line {
+  display: block;
+  height: 400px;
+  position: relative;
+  width: 23px;
+  background: -webkit-repeating-linear-gradient(bottom, #fff 0px, #fff 0.5%, transparent 0.51%, transparent 9.91%);
+  background: -moz-repeating-linear-gradient(bottom, #fff 0px, #fff 0.5%, transparent 0.51%, transparent 9.91%);
+  background: -o-repeating-linear-gradient(bottom, #fff 0px, #fff 0.5%, transparent 0.51%, transparent 9.91%);
+  background: -ms-repeating-linear-gradient(bottom, #fff 0px, #fff 0.5%, transparent 0.51%, transparent 9.91%);
+  background: repeating-linear-gradient(to top, #fff 0px, #fff 0.5%, transparent 0.51%, transparent 9.91%);
+  -webkit-animation: 2s ease-in-out 0s infinite alternate none running horizontal-left-move;
+  -moz-animation: 2s ease-in-out 0s infinite alternate none running horizontal-left-move;
+  -o-animation: 2s ease-in-out 0s infinite alternate none running horizontal-left-move;
+  -ms-animation: 2s ease-in-out 0s infinite alternate none running horizontal-left-move;
+  animation: 2s ease-in-out 0s infinite alternate none running horizontal-left-move;
+}
+#ark-menu-box .ark-menu-horizontal-left .ark-menu-horizontal-left-line::before {
+  content: "";
+  position: absolute;
+  height: 400px;
+  left: 0px;
+  top: 3%;
+  width: 4px;
+  background: -webkit-repeating-linear-gradient(bottom, #fff 0px, #fff 3%, transparent 3.01%, transparent 9.91%);
+  background: -moz-repeating-linear-gradient(bottom, #fff 0px, #fff 3%, transparent 3.01%, transparent 9.91%);
+  background: -o-repeating-linear-gradient(bottom, #fff 0px, #fff 3%, transparent 3.01%, transparent 9.91%);
+  background: -ms-repeating-linear-gradient(bottom, #fff 0px, #fff 3%, transparent 3.01%, transparent 9.91%);
+  background: repeating-linear-gradient(to top, #fff 0px, #fff 3%, transparent 3.01%, transparent 9.91%);
+  clip-path: inset(53% 0px 0px);
+}
+#ark-menu-box .ark-menu-horizontal-left .ark-menu-horizontal-left-line::after {
+  content: "";
+  position: absolute;
+  height: 400px;
+  left: 0px;
+  bottom: 3%;
+  width: 4px;
+  background: -webkit-repeating-linear-gradient(bottom, transparent 0px, transparent 6.9%, #fff 6.91%, #fff 9.91%);
+  background: -moz-repeating-linear-gradient(bottom, transparent 0px, transparent 6.9%, #fff 6.91%, #fff 9.91%);
+  background: -o-repeating-linear-gradient(bottom, transparent 0px, transparent 6.9%, #fff 6.91%, #fff 9.91%);
+  background: -ms-repeating-linear-gradient(bottom, transparent 0px, transparent 6.9%, #fff 6.91%, #fff 9.91%);
+  background: repeating-linear-gradient(to top, transparent 0px, transparent 6.9%, #fff 6.91%, #fff 9.91%);
+  clip-path: inset(0px 0px 53%);
+}
+#ark-menu-box .ark-menu-horizontal-right {
+  display: block;
+  position: fixed;
+  right: calc(50% - 550px);
+  top: calc(50% - 200px);
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+  filter: none;
+  -webkit-transition: opacity 0.3s linear 0s;
+  -moz-transition: opacity 0.3s linear 0s;
+  -o-transition: opacity 0.3s linear 0s;
+  -ms-transition: opacity 0.3s linear 0s;
+  transition: opacity 0.3s linear 0s;
+}
+#ark-menu-box .ark-menu-horizontal-right .ark-menu-horizontal-right-line {
+  display: block;
+  height: 400px;
+  position: relative;
+  width: 23px;
+  background: -webkit-repeating-linear-gradient(bottom, #fff 0px, #fff 0.5%, transparent 0.51%, transparent 9.91%);
+  background: -moz-repeating-linear-gradient(bottom, #fff 0px, #fff 0.5%, transparent 0.51%, transparent 9.91%);
+  background: -o-repeating-linear-gradient(bottom, #fff 0px, #fff 0.5%, transparent 0.51%, transparent 9.91%);
+  background: -ms-repeating-linear-gradient(bottom, #fff 0px, #fff 0.5%, transparent 0.51%, transparent 9.91%);
+  background: repeating-linear-gradient(to top, #fff 0px, #fff 0.5%, transparent 0.51%, transparent 9.91%);
+  -webkit-animation: 2s ease-in-out 0s infinite alternate none running horizontal-right-move;
+  -moz-animation: 2s ease-in-out 0s infinite alternate none running horizontal-right-move;
+  -o-animation: 2s ease-in-out 0s infinite alternate none running horizontal-right-move;
+  -ms-animation: 2s ease-in-out 0s infinite alternate none running horizontal-right-move;
+  animation: 2s ease-in-out 0s infinite alternate none running horizontal-right-move;
+}
+#ark-menu-box .ark-menu-horizontal-right .ark-menu-horizontal-right-line::before {
+  content: "";
+  position: absolute;
+  height: 400px;
+  right: 0px;
+  top: 3%;
+  width: 4px;
+  background: -webkit-repeating-linear-gradient(bottom, #fff 0px, #fff 3%, transparent 3.01%, transparent 9.91%);
+  background: -moz-repeating-linear-gradient(bottom, #fff 0px, #fff 3%, transparent 3.01%, transparent 9.91%);
+  background: -o-repeating-linear-gradient(bottom, #fff 0px, #fff 3%, transparent 3.01%, transparent 9.91%);
+  background: -ms-repeating-linear-gradient(bottom, #fff 0px, #fff 3%, transparent 3.01%, transparent 9.91%);
+  background: repeating-linear-gradient(to top, #fff 0px, #fff 3%, transparent 3.01%, transparent 9.91%);
+  clip-path: inset(53% 0px 0px);
+}
+#ark-menu-box .ark-menu-horizontal-right .ark-menu-horizontal-right-line::after {
+  content: "";
+  position: absolute;
+  height: 400px;
+  right: 0px;
+  bottom: 3%;
+  width: 4px;
+  background: -webkit-repeating-linear-gradient(bottom, transparent 0px, transparent 6.9%, #fff 6.91%, #fff 9.91%);
+  background: -moz-repeating-linear-gradient(bottom, transparent 0px, transparent 6.9%, #fff 6.91%, #fff 9.91%);
+  background: -o-repeating-linear-gradient(bottom, transparent 0px, transparent 6.9%, #fff 6.91%, #fff 9.91%);
+  background: -ms-repeating-linear-gradient(bottom, transparent 0px, transparent 6.9%, #fff 6.91%, #fff 9.91%);
+  background: repeating-linear-gradient(to top, transparent 0px, transparent 6.9%, #fff 6.91%, #fff 9.91%);
+  clip-path: inset(0px 0px 53%);
+}
+#ark-menu-box .ark-menu-horizontal-top {
+  display: block;
+  position: fixed;
+  height: 15px;
+  width: 200px;
+  left: calc(50% - 100px);
+  bottom: calc(50% + 120px);
+  overflow-x: hidden;
+  padding: 5px 0px 0px;
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+  filter: none;
+  -webkit-transition: opacity 0.3s linear 0s;
+  -moz-transition: opacity 0.3s linear 0s;
+  -o-transition: opacity 0.3s linear 0s;
+  -ms-transition: opacity 0.3s linear 0s;
+  transition: opacity 0.3s linear 0s;
+}
+#ark-menu-box .ark-menu-horizontal-top::before {
+  content: "";
+  height: 5px;
+  width: 10px;
+  display: block;
+  background: #fff;
+  position: absolute;
+  bottom: 10px;
+  left: 70%;
+  clip-path: polygon(0px 0px, 100% 0px, 50% 100%);
+}
+#ark-menu-box .ark-menu-horizontal-top .ark-menu-horizontal-top-line {
+  height: 5px;
+  width: 300px;
+  position: relative;
+  -webkit-animation: 3s ease-in 0s infinite alternate none running horizontal-center-move;
+  -moz-animation: 3s ease-in 0s infinite alternate none running horizontal-center-move;
+  -o-animation: 3s ease-in 0s infinite alternate none running horizontal-center-move;
+  -ms-animation: 3s ease-in 0s infinite alternate none running horizontal-center-move;
+  animation: 3s ease-in 0s infinite alternate none running horizontal-center-move;
+  left: -50px;
+  background: -webkit-repeating-linear-gradient(right, #fff 0px, #fff 0.5%, transparent 0.51%, transparent 2%);
+  background: -moz-repeating-linear-gradient(right, #fff 0px, #fff 0.5%, transparent 0.51%, transparent 2%);
+  background: -o-repeating-linear-gradient(right, #fff 0px, #fff 0.5%, transparent 0.51%, transparent 2%);
+  background: -ms-repeating-linear-gradient(right, #fff 0px, #fff 0.5%, transparent 0.51%, transparent 2%);
+  background: repeating-linear-gradient(to left, #fff 0px, #fff 0.5%, transparent 0.51%, transparent 2%);
+}
+#ark-menu-box .ark-menu-horizontal-top .ark-menu-horizontal-top-line::before {
+  content: "";
+  height: 10px;
+  position: absolute;
+  width: 300px;
+  top: 0px;
+  left: 0px;
+  background: -webkit-repeating-linear-gradient(right, #fff 0px, #fff 0.5%, transparent 0.51%, transparent 10%);
+  background: -moz-repeating-linear-gradient(right, #fff 0px, #fff 0.5%, transparent 0.51%, transparent 10%);
+  background: -o-repeating-linear-gradient(right, #fff 0px, #fff 0.5%, transparent 0.51%, transparent 10%);
+  background: -ms-repeating-linear-gradient(right, #fff 0px, #fff 0.5%, transparent 0.51%, transparent 10%);
+  background: repeating-linear-gradient(to left, #fff 0px, #fff 0.5%, transparent 0.51%, transparent 10%);
+}
+#ark-menu-box .ark-menu-horizontal-bottom {
+  display: block;
+  position: fixed;
+  height: 15px;
+  width: 200px;
+  left: calc(50% - 100px);
+  top: calc(50% + 120px);
+  overflow-x: hidden;
+  padding: 0px 0px 5px;
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+  filter: none;
+  -webkit-transition: opacity 0.3s linear 0s;
+  -moz-transition: opacity 0.3s linear 0s;
+  -o-transition: opacity 0.3s linear 0s;
+  -ms-transition: opacity 0.3s linear 0s;
+  transition: opacity 0.3s linear 0s;
+}
+#ark-menu-box .ark-menu-horizontal-bottom::before {
+  content: "";
+  height: 5px;
+  width: 10px;
+  display: block;
+  background: #fff;
+  position: absolute;
+  bottom: 0px;
+  left: 30%;
+  clip-path: polygon(0px 100%, 100% 100%, 50% 0px);
+}
+#ark-menu-box .ark-menu-horizontal-bottom .ark-menu-horizontal-bottom-line {
+  height: 5px;
+  width: 300px;
+  position: relative;
+  -webkit-animation: 3s ease-out 0s infinite alternate none running horizontal-center-move;
+  -moz-animation: 3s ease-out 0s infinite alternate none running horizontal-center-move;
+  -o-animation: 3s ease-out 0s infinite alternate none running horizontal-center-move;
+  -ms-animation: 3s ease-out 0s infinite alternate none running horizontal-center-move;
+  animation: 3s ease-out 0s infinite alternate none running horizontal-center-move;
+  left: -50px;
+  top: 5px;
+  background: -webkit-repeating-linear-gradient(right, #fff 0px, #fff 0.5%, transparent 0.51%, transparent 2%);
+  background: -moz-repeating-linear-gradient(right, #fff 0px, #fff 0.5%, transparent 0.51%, transparent 2%);
+  background: -o-repeating-linear-gradient(right, #fff 0px, #fff 0.5%, transparent 0.51%, transparent 2%);
+  background: -ms-repeating-linear-gradient(right, #fff 0px, #fff 0.5%, transparent 0.51%, transparent 2%);
+  background: repeating-linear-gradient(to left, #fff 0px, #fff 0.5%, transparent 0.51%, transparent 2%);
+}
+#ark-menu-box .ark-menu-horizontal-bottom .ark-menu-horizontal-bottom-line::before {
+  content: "";
+  height: 10px;
+  position: absolute;
+  width: 300px;
+  bottom: 0px;
+  left: 0px;
+  background: -webkit-repeating-linear-gradient(right, #fff 0px, #fff 0.5%, transparent 0.51%, transparent 10%);
+  background: -moz-repeating-linear-gradient(right, #fff 0px, #fff 0.5%, transparent 0.51%, transparent 10%);
+  background: -o-repeating-linear-gradient(right, #fff 0px, #fff 0.5%, transparent 0.51%, transparent 10%);
+  background: -ms-repeating-linear-gradient(right, #fff 0px, #fff 0.5%, transparent 0.51%, transparent 10%);
+  background: repeating-linear-gradient(to left, #fff 0px, #fff 0.5%, transparent 0.51%, transparent 10%);
+}
+#ark-menu-box #ark-menu {
+  clip-path: circle(100%);
+  -webkit-transition: clip-path 0.3s linear 0.2s;
+  -moz-transition: clip-path 0.3s linear 0.2s;
+  -o-transition: clip-path 0.3s linear 0.2s;
+  -ms-transition: clip-path 0.3s linear 0.2s;
+  transition: clip-path 0.3s linear 0.2s;
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  text-align: center;
+  position: relative;
+}
+#ark-menu-box #ark-menu::after {
+  content: "";
+  display: block;
+  height: 120%;
+  width: 126%;
+  position: absolute;
+  background: -webkit-linear-gradient(left, var(--ark-post-item-screen) 30px, #e9e9e9, #e9e9e9 60px, transparent), -webkit-linear-gradient(right, var(--ark-post-item-screen) 30px, #e9e9e9, #e9e9e9 60px, transparent);
+  background: -moz-linear-gradient(left, var(--ark-post-item-screen) 30px, #e9e9e9, #e9e9e9 60px, transparent), -moz-linear-gradient(right, var(--ark-post-item-screen) 30px, #e9e9e9, #e9e9e9 60px, transparent);
+  background: -o-linear-gradient(left, var(--ark-post-item-screen) 30px, #e9e9e9, #e9e9e9 60px, transparent), -o-linear-gradient(right, var(--ark-post-item-screen) 30px, #e9e9e9, #e9e9e9 60px, transparent);
+  background: -ms-linear-gradient(left, var(--ark-post-item-screen) 30px, #e9e9e9, #e9e9e9 60px, transparent), -ms-linear-gradient(right, var(--ark-post-item-screen) 30px, #e9e9e9, #e9e9e9 60px, transparent);
+  background: linear-gradient(to right, var(--ark-post-item-screen) 30px, #e9e9e9, #e9e9e9 60px, transparent), linear-gradient(to left, var(--ark-post-item-screen) 30px, #e9e9e9, #e9e9e9 60px, transparent);
+  z-index: 3;
+  left: -13%;
+  top: -10%;
+  clip-path: polygon(50% 50%, 45px 50%, 45px 45px, 60px 45px, 65px 40px, 40px 40px, 40px 65px, 45px 60px, 45px 50%, 25px 50%, 25px calc(50% - 15px), 10px calc(50% - 15px), 10px calc(50% - 10px), 25px calc(50% - 10px), 25px calc(50% - 2.5px), 0px calc(50% - 2.5px), 0px 50%, 50% 50%, 45px 50%, 45px calc(100% - 45px), 60px calc(100% - 45px), 65px calc(100% - 40px), 40px calc(100% - 40px), 40px calc(100% - 65px), 45px calc(100% - 60px), 45px 50%, 25px 50%, 25px calc(50% + 15px), 10px calc(50% + 15px), 10px calc(50% + 10px), 25px calc(50% + 10px), 25px calc(50% + 2.5px), 0px calc(50% + 2.5px), 0px 50%, 50% 50%, calc(100% - 45px) 50%, calc(100% - 45px) 45px, calc(100% - 60px) 45px, calc(100% - 65px) 40px, calc(100% - 40px) 40px, calc(100% - 40px) 65px, calc(100% - 45px) 60px, calc(100% - 45px) 50%, calc(100% - 25px) 50%, calc(100% - 25px) calc(50% - 15px), calc(100% - 10px) calc(50% - 15px), calc(100% - 10px) calc(50% - 10px), calc(100% - 25px) calc(50% - 10px), calc(100% - 25px) calc(50% - 2.5px), 100% calc(50% - 2.5px), 100% 50%, 50% 50%, calc(100% - 45px) 50%, calc(100% - 45px) calc(100% - 45px), calc(100% - 60px) calc(100% - 45px), calc(100% - 65px) calc(100% - 40px), calc(100% - 40px) calc(100% - 40px), calc(100% - 40px) calc(100% - 65px), calc(100% - 45px) calc(100% - 60px), calc(100% - 45px) 50%, calc(100% - 25px) 50%, calc(100% - 25px) calc(50% + 15px), calc(100% - 10px) calc(50% + 15px), calc(100% - 10px) calc(50% + 10px), calc(100% - 25px) calc(50% + 10px), calc(100% - 25px) calc(50% + 2.5px), 100% calc(50% + 2.5px), 100% 50%, 50% 50%);
+}
+#ark-menu-box #ark-menu .ark-menu-pagination {
+  position: absolute;
+  bottom: 20px;
+}
+#ark-menu-box #ark-menu-end-btn {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: calc(50% + 210px);
+  color: var(--ark-cab-border-color);
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+  filter: none;
+  -webkit-transition: opacity 0.3s linear 0.2s;
+  -moz-transition: opacity 0.3s linear 0.2s;
+  -o-transition: opacity 0.3s linear 0.2s;
+  -ms-transition: opacity 0.3s linear 0.2s;
+  transition: opacity 0.3s linear 0.2s;
+}
+#ark-menu-box #ark-menu-end-btn:hover {
+  color: var(--ark-post-item-font-hover);
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+#ark-menu-box.arkend * {
+  -webkit-transition: all 0.7s linear 0.3s;
+  -moz-transition: all 0.7s linear 0.3s;
+  -o-transition: all 0.7s linear 0.3s;
+  -ms-transition: all 0.7s linear 0.3s;
+  transition: all 0.7s linear 0.3s;
+}
+#ark-menu-box.arkend .ark-menu-horizontal-left {
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  -webkit-transition: opacity 0.3s linear 0.4s;
+  -moz-transition: opacity 0.3s linear 0.4s;
+  -o-transition: opacity 0.3s linear 0.4s;
+  -ms-transition: opacity 0.3s linear 0.4s;
+  transition: opacity 0.3s linear 0.4s;
+}
+#ark-menu-box.arkend .ark-menu-horizontal-right {
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  -webkit-transition: opacity 0.3s linear 0.4s;
+  -moz-transition: opacity 0.3s linear 0.4s;
+  -o-transition: opacity 0.3s linear 0.4s;
+  -ms-transition: opacity 0.3s linear 0.4s;
+  transition: opacity 0.3s linear 0.4s;
+}
+#ark-menu-box.arkend .ark-menu-horizontal-top {
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  -webkit-transition: opacity 0.3s linear 0.3s;
+  -moz-transition: opacity 0.3s linear 0.3s;
+  -o-transition: opacity 0.3s linear 0.3s;
+  -ms-transition: opacity 0.3s linear 0.3s;
+  transition: opacity 0.3s linear 0.3s;
+}
+#ark-menu-box.arkend .ark-menu-horizontal-bottom {
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  -webkit-transition: opacity 0.3s linear 0.3s;
+  -moz-transition: opacity 0.3s linear 0.3s;
+  -o-transition: opacity 0.3s linear 0.3s;
+  -ms-transition: opacity 0.3s linear 0.3s;
+  transition: opacity 0.3s linear 0.3s;
+}
+#ark-menu-box.arkend #ark-menu {
+  clip-path: circle(0px);
+  -webkit-transition: clip-path 0.3s linear 0.5s;
+  -moz-transition: clip-path 0.3s linear 0.5s;
+  -o-transition: clip-path 0.3s linear 0.5s;
+  -ms-transition: clip-path 0.3s linear 0.5s;
+  transition: clip-path 0.3s linear 0.5s;
+}
+#ark-menu-box.arkend #ark-menu-end-btn {
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  -webkit-transition: opacity 0.2s linear 0s;
+  -moz-transition: opacity 0.2s linear 0s;
+  -o-transition: opacity 0.2s linear 0s;
+  -ms-transition: opacity 0.2s linear 0s;
+  transition: opacity 0.2s linear 0s;
+}
+#ark-menu-box #ark-menu .menu-item-container,
+#ark-menu-box #ark-menu .menu-item-second-container {
+  width: 230px;
+  height: 230px;
+  overflow: hidden;
+  border-radius: 50%;
+  position: relative;
+}
+#ark-menu-box #ark-menu .menu-item-container .site-page,
+#ark-menu-box #ark-menu .menu-item-second-container .site-page {
+  clip-path: polygon(40% 0px, 45% 5%, 55% 5%, 60% 0px, 100% 0px, 100% 40%, 95% 45%, 95% 55%, 100% 60%, 100% 100%, 60% 100%, 55% 95%, 45% 95%, 40% 100%, 0px 100%, 0px 60%, 5% 55%, 5% 45%, 0px 40%, 0px 0px);
+  width: 230px;
+  height: 230px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -o-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -o-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  background: var(--ark-menu-background);
+  -webkit-box-shadow: rgba(233,233,233,0.8) 0px 0px 0px 3px inset;
+  box-shadow: rgba(233,233,233,0.8) 0px 0px 0px 3px inset;
+  border-radius: 50%;
+  overflow: hidden;
+}
+#ark-menu-box #ark-menu .menu-item-container .site-page i.fa-fw,
+#ark-menu-box #ark-menu .menu-item-container .site-page svg.icon,
+#ark-menu-box #ark-menu .menu-item-second-container .site-page i.fa-fw,
+#ark-menu-box #ark-menu .menu-item-second-container .site-page svg.icon {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  opacity: 0.5;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+  z-index: 999;
+}
+#ark-menu-box #ark-menu .menu-item-container .site-page .site-page-link,
+#ark-menu-box #ark-menu .menu-item-second-container .site-page .site-page-link {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -o-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  z-index: 1000;
+  height: 50px;
+  width: 150%;
+  font-size: 30px;
+  font-family: TaikoMagic;
+  background: var(--ark-menu-border);
+  color: #fff;
+  text-shadow: #222 2px 2px 3px;
+  -webkit-box-pack: center;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -o-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+#ark-menu-box #ark-menu .menu-item-container .site-page .site-page-link:hover,
+#ark-menu-box #ark-menu .menu-item-second-container .site-page .site-page-link:hover {
+  color: var(--ark-post-item-font-hover);
+}
+#ark-menu-box #ark-menu .menu-item-container .site-cube-left,
+#ark-menu-box #ark-menu .menu-item-second-container .site-cube-left {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  clip-path: polygon(40% 0px, 45% 5%, 50% 5%, 50% 95%, 45% 95%, 40% 100%, 0px 100%, 0px 60%, 5% 55%, 5% 45%, 0px 40%, 0px 0px);
+  width: 230px;
+  height: 230px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -o-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -o-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  background: var(--ark-menu-background);
+  -webkit-box-shadow: rgba(233,233,233,0.8) 0px 0px 0px 3px inset;
+  box-shadow: rgba(233,233,233,0.8) 0px 0px 0px 3px inset;
+  border-radius: 50%;
+  overflow: hidden;
+}
+#ark-menu-box #ark-menu .menu-item-container .site-cube-left i.fa-fw,
+#ark-menu-box #ark-menu .menu-item-container .site-cube-left svg.icon,
+#ark-menu-box #ark-menu .menu-item-second-container .site-cube-left i.fa-fw,
+#ark-menu-box #ark-menu .menu-item-second-container .site-cube-left svg.icon {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  opacity: 0.5;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+  z-index: 999;
+}
+#ark-menu-box #ark-menu .menu-item-container .site-cube-left .site-page-link,
+#ark-menu-box #ark-menu .menu-item-second-container .site-cube-left .site-page-link {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -o-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  z-index: 1000;
+  height: 50px;
+  width: 150%;
+  font-size: 30px;
+  font-family: TaikoMagic;
+  background: var(--ark-menu-border);
+  color: #fff;
+  text-shadow: #222 2px 2px 3px;
+  -webkit-box-pack: start;
+  -webkit-box-pack: start;
+  -moz-box-pack: start;
+  -o-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  padding-left: 10%;
+}
+#ark-menu-box #ark-menu .menu-item-container .site-cube-left .site-page-link:hover,
+#ark-menu-box #ark-menu .menu-item-second-container .site-cube-left .site-page-link:hover {
+  color: var(--ark-post-item-font-hover);
+}
+#ark-menu-box #ark-menu .menu-item-container .site-cube-right,
+#ark-menu-box #ark-menu .menu-item-second-container .site-cube-right {
+  clip-path: polygon(50% 5%, 55% 5%, 60% 0px, 100% 0px, 100% 40%, 95% 45%, 95% 55%, 100% 60%, 100% 100%, 60% 100%, 55% 95%, 50% 95%);
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -o-box-orient: vertical;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  -webkit-box-align: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -o-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  overflow-y: scroll;
+  height: 237px;
+}
+#ark-menu-box #ark-menu .menu-item-container .site-cube-right .menu-item-second,
+#ark-menu-box #ark-menu .menu-item-second-container .site-cube-right .menu-item-second {
+  width: 230px;
+  height: 230px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -o-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -o-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+#ark-menu-box #ark-menu .menu-item-container .site-cube-right .menu-item-second .site-page,
+#ark-menu-box #ark-menu .menu-item-second-container .site-cube-right .menu-item-second .site-page {
+  position: relative;
+}
+#ark-menu-box #ark-menu .menu-item-container .site-cube-right .menu-item-second .site-page .site-page-link,
+#ark-menu-box #ark-menu .menu-item-second-container .site-cube-right .menu-item-second .site-page .site-page-link {
+  -webkit-box-pack: end;
+  -webkit-box-pack: end;
+  -moz-box-pack: end;
+  -o-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+  padding-right: 10%;
+}
+@-moz-keyframes horizontal-left-move {
+  0% {
+    -webkit-transform: skewX(5deg) translateY(10px);
+    -moz-transform: skewX(5deg) translateY(10px);
+    -o-transform: skewX(5deg) translateY(10px);
+    -ms-transform: skewX(5deg) translateY(10px);
+    transform: skewX(5deg) translateY(10px);
+  }
+  100% {
+    -webkit-transform: skewX(5deg) translateY(-10px);
+    -moz-transform: skewX(5deg) translateY(-10px);
+    -o-transform: skewX(5deg) translateY(-10px);
+    -ms-transform: skewX(5deg) translateY(-10px);
+    transform: skewX(5deg) translateY(-10px);
+  }
+}
+@-webkit-keyframes horizontal-left-move {
+  0% {
+    -webkit-transform: skewX(5deg) translateY(10px);
+    -moz-transform: skewX(5deg) translateY(10px);
+    -o-transform: skewX(5deg) translateY(10px);
+    -ms-transform: skewX(5deg) translateY(10px);
+    transform: skewX(5deg) translateY(10px);
+  }
+  100% {
+    -webkit-transform: skewX(5deg) translateY(-10px);
+    -moz-transform: skewX(5deg) translateY(-10px);
+    -o-transform: skewX(5deg) translateY(-10px);
+    -ms-transform: skewX(5deg) translateY(-10px);
+    transform: skewX(5deg) translateY(-10px);
+  }
+}
+@-o-keyframes horizontal-left-move {
+  0% {
+    -webkit-transform: skewX(5deg) translateY(10px);
+    -moz-transform: skewX(5deg) translateY(10px);
+    -o-transform: skewX(5deg) translateY(10px);
+    -ms-transform: skewX(5deg) translateY(10px);
+    transform: skewX(5deg) translateY(10px);
+  }
+  100% {
+    -webkit-transform: skewX(5deg) translateY(-10px);
+    -moz-transform: skewX(5deg) translateY(-10px);
+    -o-transform: skewX(5deg) translateY(-10px);
+    -ms-transform: skewX(5deg) translateY(-10px);
+    transform: skewX(5deg) translateY(-10px);
+  }
+}
+@keyframes horizontal-left-move {
+  0% {
+    -webkit-transform: skewX(5deg) translateY(10px);
+    -moz-transform: skewX(5deg) translateY(10px);
+    -o-transform: skewX(5deg) translateY(10px);
+    -ms-transform: skewX(5deg) translateY(10px);
+    transform: skewX(5deg) translateY(10px);
+  }
+  100% {
+    -webkit-transform: skewX(5deg) translateY(-10px);
+    -moz-transform: skewX(5deg) translateY(-10px);
+    -o-transform: skewX(5deg) translateY(-10px);
+    -ms-transform: skewX(5deg) translateY(-10px);
+    transform: skewX(5deg) translateY(-10px);
+  }
+}
+@-moz-keyframes horizontal-right-move {
+  0% {
+    -webkit-transform: skewX(-5deg) translateY(10px);
+    -moz-transform: skewX(-5deg) translateY(10px);
+    -o-transform: skewX(-5deg) translateY(10px);
+    -ms-transform: skewX(-5deg) translateY(10px);
+    transform: skewX(-5deg) translateY(10px);
+  }
+  100% {
+    -webkit-transform: skewX(-5deg) translateY(-10px);
+    -moz-transform: skewX(-5deg) translateY(-10px);
+    -o-transform: skewX(-5deg) translateY(-10px);
+    -ms-transform: skewX(-5deg) translateY(-10px);
+    transform: skewX(-5deg) translateY(-10px);
+  }
+}
+@-webkit-keyframes horizontal-right-move {
+  0% {
+    -webkit-transform: skewX(-5deg) translateY(10px);
+    -moz-transform: skewX(-5deg) translateY(10px);
+    -o-transform: skewX(-5deg) translateY(10px);
+    -ms-transform: skewX(-5deg) translateY(10px);
+    transform: skewX(-5deg) translateY(10px);
+  }
+  100% {
+    -webkit-transform: skewX(-5deg) translateY(-10px);
+    -moz-transform: skewX(-5deg) translateY(-10px);
+    -o-transform: skewX(-5deg) translateY(-10px);
+    -ms-transform: skewX(-5deg) translateY(-10px);
+    transform: skewX(-5deg) translateY(-10px);
+  }
+}
+@-o-keyframes horizontal-right-move {
+  0% {
+    -webkit-transform: skewX(-5deg) translateY(10px);
+    -moz-transform: skewX(-5deg) translateY(10px);
+    -o-transform: skewX(-5deg) translateY(10px);
+    -ms-transform: skewX(-5deg) translateY(10px);
+    transform: skewX(-5deg) translateY(10px);
+  }
+  100% {
+    -webkit-transform: skewX(-5deg) translateY(-10px);
+    -moz-transform: skewX(-5deg) translateY(-10px);
+    -o-transform: skewX(-5deg) translateY(-10px);
+    -ms-transform: skewX(-5deg) translateY(-10px);
+    transform: skewX(-5deg) translateY(-10px);
+  }
+}
+@keyframes horizontal-right-move {
+  0% {
+    -webkit-transform: skewX(-5deg) translateY(10px);
+    -moz-transform: skewX(-5deg) translateY(10px);
+    -o-transform: skewX(-5deg) translateY(10px);
+    -ms-transform: skewX(-5deg) translateY(10px);
+    transform: skewX(-5deg) translateY(10px);
+  }
+  100% {
+    -webkit-transform: skewX(-5deg) translateY(-10px);
+    -moz-transform: skewX(-5deg) translateY(-10px);
+    -o-transform: skewX(-5deg) translateY(-10px);
+    -ms-transform: skewX(-5deg) translateY(-10px);
+    transform: skewX(-5deg) translateY(-10px);
+  }
+}
+@-moz-keyframes horizontal-center-move {
+  0% {
+    left: -100px;
+  }
+  100% {
+    left: 0px;
+  }
+}
+@-webkit-keyframes horizontal-center-move {
+  0% {
+    left: -100px;
+  }
+  100% {
+    left: 0px;
+  }
+}
+@-o-keyframes horizontal-center-move {
+  0% {
+    left: -100px;
+  }
+  100% {
+    left: 0px;
+  }
+}
+@keyframes horizontal-center-move {
+  0% {
+    left: -100px;
+  }
+  100% {
+    left: 0px;
   }
 }
 .recent-post-item#swiperBar {
@@ -6667,6 +7466,21 @@ h2.f4.text-normal.mb-3 {
 .angle-box {
   position: fixed;
   padding: 10px;
+}
+.recent-post-item#gitcalendarBar {
+  position: relative;
+  padding: 20px 30px !important;
+}
+.recent-post-item#gitcalendarBar:before {
+  width: 100%;
+  z-index: 3;
+  height: 100%;
+  left: 0;
+  top: 0;
+  content: "";
+  background: var(--ark-post-item-border);
+  position: absolute;
+  clip-path: polygon(50% 50%, 35px 50%, 30px calc(50% - 5px), 30px 50%, 25px 50%, 25px calc(50% - 25px), 15px calc(50% - 30px), 15px 10px, 30px 0, 10px 0, 0 10px, 0 calc(100% - 10px), 10px 100%, 30px 100%, 15px calc(100% - 10px), 15px calc(50% + 30px), 25px calc(50% + 25px), 25px 50%, 30px 50%, 30px calc(50% + 5px), 35px 50%, 50% 50%, calc(100% - 35px) 50%, calc(100% - 30px) calc(50% - 5px), calc(100% - 30px) 50%, calc(100% - 25px) 50%, calc(100% - 25px) calc(50% - 25px), calc(100% - 15px) calc(50% - 30px), calc(100% - 15px) 10px, calc(100% - 30px) 0, calc(100% - 10px) 0, 100% 10px, 100% calc(100% - 10px), calc(100% - 10px) 100%, calc(100% - 30px) 100%, calc(100% - 15px) calc(100% - 10px), calc(100% - 15px) calc(50% + 30px), calc(100% - 25px) calc(50% + 25px), calc(100% - 25px) 50%, calc(100% - 30px) 50%, calc(100% - 30px) calc(50% + 5px), calc(100% - 35px) 50%, 50% 50%);
 }
 #page-header {
   position: relative;
@@ -10168,7 +10982,7 @@ _:future,
   }
   #rightside> div > button::before,
   #rightside> div > a::before {
-    content: "skei";
+    content: "Skei";
     font-size: 12px;
     display: -webkit-box;
     display: -moz-box;
@@ -14845,103 +15659,6 @@ div.timenode .meta:after {
 .read-mode #article-container .note .note-icon {
   color: var(--font-color);
 }
-@font-face {
-  font-family: 'UnidreamLED';
-  src: url("/assets/fonts/UnidreamLED.ttf");
-  font-display: swap;
-}
-#clock {
-  height: 153px;
-  padding: 20px 10px;
-  border-radius: 8px;
-  background-color: #ececec;
-  -webkit-box-shadow: inset 3px 3px 18px 0px rgba(50,50,50,0.4);
-  box-shadow: inset 3px 3px 18px 0px rgba(50,50,50,0.4);
-  z-index: 2;
-  font-family: 'UnidreamLED';
-  color: #000;
-}
-#clock th {
-  padding: 0;
-  border: 0;
-}
-#clock td {
-  padding: 0;
-  border: 0;
-}
-#clock .clockdate {
-  font-size: 14px;
-  font-weight: normal;
-  margin-block-start: 0em;
-  margin-block-end: 0em;
-  line-height: 1;
-  min-width: 20px;
-}
-#clock .time {
-  font-size: 38px;
-  font-weight: normal;
-  margin-block-start: 0em;
-  margin-block-end: -0.2em;
-  line-height: 1.5;
-  text-align: center;
-}
-#clock .daylight {
-  text-align: right;
-  min-width: 20px;
-}
-#clock #weatherimg {
-  -webkit-filter: brightness(0%);
-  filter: brightness(0%);
-  width: 14px !important;
-  height: 14px !important;
-}
-#clock #humidityimg {
-  -webkit-filter: brightness(0%);
-  filter: brightness(0%);
-  width: 14px !important;
-  height: 14px !important;
-}
-#clock .humidityimg {
-  min-width: 20px;
-  text-align: right;
-  padding-right: 3px;
-}
-#clock .weatherimg {
-  min-width: 20px;
-  padding-right: 3px;
-}
-#clock .temperature {
-  min-width: 20px;
-  padding-right: 3px;
-}
-#clock .humidity {
-  text-align: right;
-  min-width: 20px;
-  padding-right: 3px;
-}
-#clock .usaqi {
-  height: 30px;
-  min-width: 20px;
-}
-#clock .city {
-  text-align: center;
-  min-width: 20px;
-  padding-right: 3px;
-}
-[data-theme="dark"] #clock {
-  background-color: #212121;
-}
-[data-theme="dark"] #clock td {
-  color: rgba(255,255,255,0.8) !important;
-}
-[data-theme="dark"] #clock #weatherimg {
-  -webkit-filter: brightness(1000%);
-  filter: brightness(1000%);
-}
-[data-theme="dark"] #clock #humidityimg {
-  -webkit-filter: brightness(1000%);
-  filter: brightness(1000%);
-}
 .cbp_tmlabel:after {
   border-right-color: transparent !important;
 }
@@ -14974,6 +15691,24 @@ span.shuoshuo_author_img {
   width: 1.2em !important;
   height: 1.2em !important;
   vertical-align: 0 !important;
+}
+:root {
+  --recent-post-background: rgba(50,50,50,0.9);
+  --recent-post-color: #fff;
+  --recent-post-content-border: rgba(117,118,120,0.8);
+  --recent-post-title-background: rgba(40,40,40,0.95);
+  --recent-post-title-color: #fff;
+  --recent-post-title-corner-background: rgba(153,54,44,0.8);
+  --recent-post-title-corner-color: rgba(233,233,233,0.9);
+}
+[data-theme=dark] {
+  --recent-post-background: rgba(40,40,40,0.8);
+  --recent-post-color: #fff;
+  --recent-post-content-border: rgba(0,78,119,0.5);
+  --recent-post-title-background: rgba(10,17,35,0.5);
+  --recent-post-title-color: #004e77;
+  --recent-post-title-corner-background: #37708f;
+  --recent-post-title-corner-color: #92cef1;
 }
 #categoryBar {
   width: 100% !important;
@@ -15093,6 +15828,53 @@ li.categoryBar-list-item {
   .categoryBar-list {
     max-height: 160px;
   }
+}
+.recent-post-item:has(#categoryBar) {
+  background: -webkit-linear-gradient(top, transparent 30px, var(--recent-post-background) 31px, var(--recent-post-background)) !important;
+  background: -moz-linear-gradient(top, transparent 30px, var(--recent-post-background) 31px, var(--recent-post-background)) !important;
+  background: -o-linear-gradient(top, transparent 30px, var(--recent-post-background) 31px, var(--recent-post-background)) !important;
+  background: -ms-linear-gradient(top, transparent 30px, var(--recent-post-background) 31px, var(--recent-post-background)) !important;
+  background: linear-gradient(to bottom, transparent 30px, var(--recent-post-background) 31px, var(--recent-post-background)) !important;
+  padding: 20px 0 0 0 !important;
+  clip-path: polygon(0 0, 100% 0, 100% 30px, calc(100% - 5px) 30px, 100% 45px, 100% 50px, 100% calc(100% - 5px), calc(100% - 5px) 100%, 5px 100%, 0 calc(100% - 5px), 0 45px, 10px 30px, 0 30px);
+}
+.recent-post-item:has(#categoryBar) .recent-post-item-headline {
+  border-top: 8px solid var(--recent-post-title-corner-background);
+  border-left: 8px solid var(--recent-post-title-corner-background);
+  -webkit-box-shadow: 0 0 10px var(--recent-post-content-border) inset;
+  box-shadow: 0 0 10px var(--recent-post-content-border) inset;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 20px;
+  background: var(--recent-post-title-background);
+  color: var(--recent-post-color);
+  min-width: 8em;
+  width: fit-content;
+  clip-path: polygon(0 0, 55px 0, 60px 10px, calc(100% - 15px) 10px, 100% 30px, 100% 100%, 30px 100%, 8px 30px, 0 25px);
+  padding: 0 1em 0 1em;
+  margin: 0 0 -20px 0;
+  position: relative;
+  top: -20px;
+  left: 10px;
+}
+.recent-post-item:has(#categoryBar) .recent-post-item-headline:after {
+  content: "Skei";
+  position: absolute;
+  bottom: 0;
+  font-size: 12px;
+  display: block;
+  right: 0;
+  line-height: 1em;
+  color: var(--recent-post-title-corner-color);
+  width: fit-content;
+  height: 1em;
+  padding: 0 5px 0 10px;
+  background: var(--recent-post-title-corner-background);
+  clip-path: polygon(5px 0, 100% 0, 100% 100%, 0 100%);
+}
+.recent-post-item:has(#categoryBar) .recent-post-item-headline .fa-sim-card:before {
+  content: "\f7c4";
 }
 .justified-gallery > div > img,
 .justified-gallery > figure > img,
