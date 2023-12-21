@@ -277,16 +277,6 @@ function ToComment(){
     linkStart('/comments/');//如果没有，就跳转到留言板
   };
 }
-//评论窗口跳转
-function ToComment(){
-  var hasComment = document.getElementById('post-comment');
-  if (hasComment){
-    window.location.href = '#post-comment'; //如果有评论区就跳转到评论区
-  }
-  else{
-    linkStart('/comments/');//如果没有，就跳转到留言板
-  };
-}
 //固化关闭右键菜单效果
 function SAOKeepOff(){
   localStorage.setItem("SAOSwitch", "turnOff");//将关闭状态激活

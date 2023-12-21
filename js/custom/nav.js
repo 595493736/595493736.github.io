@@ -22,7 +22,7 @@ function ark_menu_link(e) {
     document.getElementById("ark-menu-box").classList.add("arkend"),
     setTimeout((function() {
         document.getElementById("ark-menu-box").classList.add("arksink"),
-        e.includes("https://") || e.includes("http://") ? window.location.href = e : pjax ? pjax.loadUrl(e) : window.location.href = e
+        e.includes("https://") || e.includes("http://") ? window.location.href = e : typeof(pjax) != 'undefined' ? pjax.loadUrl(e) : window.location.href = e
     }
     ), 500)
 }

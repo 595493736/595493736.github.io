@@ -90,3 +90,6 @@ div#category{
 .card-archive-list span {
   color: #fff!important;
 }
+.text-gray {
+  color: var(--recent-post-color);
+}
