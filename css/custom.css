@@ -93,6 +93,9 @@ div#category{
 .text-gray {
   color: var(--recent-post-color);
 }
+#site-title{
+  font-family: 'TaikoMagic'!important;
+}
 
 
 

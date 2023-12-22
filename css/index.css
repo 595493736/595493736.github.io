@@ -15955,6 +15955,127 @@ div#runtime {
     transform: rotateY(0deg);
   }
 }
+div#post-comment.fixedcomment {
+  position: fixed;
+  top: 0;
+  width: 60% !important;
+  right: 0;
+  padding: 25px 30px 20px 20px !important;
+  height: 100vh !important;
+  overflow: scroll;
+  z-index: 90;
+  background: rgba(222,222,222,0.95);
+  -webkit-box-shadow: 3px 2px 14px #464340;
+  box-shadow: 3px 2px 14px #464340;
+  -webkit-animation: fixedright 0.5s linear;
+  -moz-animation: fixedright 0.5s linear;
+  -o-animation: fixedright 0.5s linear;
+  -ms-animation: fixedright 0.5s linear;
+  animation: fixedright 0.5s linear;
+}
+div#post-comment.fixedcomment::-webkit-scrollbar {
+  width: 0;
+}
+div#quit-board {
+  display: none;
+}
+div#quit-board.fixedcomment {
+  position: fixed;
+  display: block !important;
+  left: 0;
+  top: 0;
+  width: 40%;
+  height: 100vh;
+  z-index: 89 !important;
+  background: rgba(25,25,25,0.3);
+  filter: blur(4px) !important;
+  -webkit-animation: fixedleft 0.5s linear;
+  -moz-animation: fixedleft 0.5s linear;
+  -o-animation: fixedleft 0.5s linear;
+  -ms-animation: fixedleft 0.5s linear;
+  animation: fixedleft 0.5s linear;
+}
+@media screen and (max-width: 768px) {
+  div#post-comment.fixedcomment {
+    width: 90%;
+    right: 0;
+  }
+  div#quit-board.fixedcomment {
+    width: 10%;
+  }
+}
+[data-theme="dark"] div#post-comment.fixedcomment {
+  background: rgba(35,35,35,0.95);
+  -webkit-box-shadow: 3px 2px 12px #90a1a4;
+  box-shadow: 3px 2px 12px #90a1a4;
+}
+[data-theme="dark"] div#quit-board.fixedcomment {
+  background: rgba(147,146,128,0.3);
+}
+@-moz-keyframes fixedright {
+  from {
+    right: -50%;
+  }
+  to {
+    right: 0;
+  }
+}
+@-webkit-keyframes fixedright {
+  from {
+    right: -50%;
+  }
+  to {
+    right: 0;
+  }
+}
+@-o-keyframes fixedright {
+  from {
+    right: -50%;
+  }
+  to {
+    right: 0;
+  }
+}
+@keyframes fixedright {
+  from {
+    right: -50%;
+  }
+  to {
+    right: 0;
+  }
+}
+@-moz-keyframes fixedleft {
+  from {
+    left: -50%;
+  }
+  to {
+    left: 0;
+  }
+}
+@-webkit-keyframes fixedleft {
+  from {
+    left: -50%;
+  }
+  to {
+    left: 0;
+  }
+}
+@-o-keyframes fixedleft {
+  from {
+    left: -50%;
+  }
+  to {
+    left: 0;
+  }
+}
+@keyframes fixedleft {
+  from {
+    left: -50%;
+  }
+  to {
+    left: 0;
+  }
+}
 :root {
   --recent-post-color: #fff;
 }
