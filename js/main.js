@@ -383,6 +383,7 @@ document.addEventListener('DOMContentLoaded', function () {
  */
   const tocFn = function () {
     const $cardTocLayout = document.getElementById('card-toc')
+    const $cardTocPercentage = $cardTocLayout.getElementsByClassName('toc-percentage')[0]
     const $cardToc = $cardTocLayout.getElementsByClassName('toc-content')[0]
     const $tocLink = $cardToc.querySelectorAll('.toc-link')
     const $article = document.getElementById('article-container')
@@ -402,7 +403,7 @@ document.addEventListener('DOMContentLoaded', function () {
       const scrollPercent = (currentTop - headerHeight) / (contentMath)
       const scrollPercentRounded = Math.round(scrollPercent * 100)
       const percentage = (scrollPercentRounded > 100) ? 100 : (scrollPercentRounded <= 0) ? 0 : scrollPercentRounded
-      $cardToc.setAttribute('progress-percentage', percentage)
+      $cardTocPercentage.innerHTML = percentage
     }
 
     // anchor

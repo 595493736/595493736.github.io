@@ -253,14 +253,14 @@ function Mirror() {
   let url;
   pathname = window.location.pathname;
   hostname = window.location.hostname;
-  if (hostname === 'akilar.top') {
-    url = "https://akilar.gitee.io" + pathname;
-    window.alert("即将前往糖果屋分店🍬");
+  if (hostname === 'www.lohblvwe.top') {
+    url = "https://595493736.github.io" + pathname;
+    window.alert("即将前往小筑分店🍬");
     window.location.href = url;
   }
-  else if(hostname === 'akilar.gitee.io') {
-    url = "https://akilar.top" + pathname;
-    window.alert("正在返回糖果屋本部🍭！");
+  else if(hostname === '595493736.github.io') {
+    url = "https://www.lohblvwe.top/" + pathname;
+    window.alert("正在返回小筑本部🍭！");
     window.location.href = url;
   }
   else {
