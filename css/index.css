@@ -7712,6 +7712,11 @@ _:future,
   --ark-loading-power-color: rgba(40,99,200,0.8);
   --ark-loading-power-shadow: rgba(14,219,255,0.8);
 }
+[data-theme=dark] {
+  --ark-loading-shadow-color: rgba(24,248,229,0.8);
+  --ark-loading-power-color: rgba(40,99,200,0.8);
+  --ark-loading-power-shadow: rgba(14,219,255,0.8);
+}
 .loading-bg,
 #loading-box .loading-left-bg,
 #loading-box .loading-right-bg {
