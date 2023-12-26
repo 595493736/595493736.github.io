@@ -8116,6 +8116,606 @@ _:future,
 #loading-box.arkend #ark-loading .ark-loading-border .ark-loading-container .ark-loading-tip:after {
   content: 'Loaded!' !important;
 }
+.pace .pace-progress[data-progress-text='1%']~.pace-activity::before {
+  clip-path: inset(99% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='1%']~.pace-activity::after {
+  clip-path: inset(99% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='2%']~.pace-activity::before {
+  clip-path: inset(98% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='2%']~.pace-activity::after {
+  clip-path: inset(98% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='3%']~.pace-activity::before {
+  clip-path: inset(97% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='3%']~.pace-activity::after {
+  clip-path: inset(97% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='4%']~.pace-activity::before {
+  clip-path: inset(96% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='4%']~.pace-activity::after {
+  clip-path: inset(96% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='5%']~.pace-activity::before {
+  clip-path: inset(95% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='5%']~.pace-activity::after {
+  clip-path: inset(95% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='6%']~.pace-activity::before {
+  clip-path: inset(94% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='6%']~.pace-activity::after {
+  clip-path: inset(94% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='7%']~.pace-activity::before {
+  clip-path: inset(93% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='7%']~.pace-activity::after {
+  clip-path: inset(93% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='8%']~.pace-activity::before {
+  clip-path: inset(92% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='8%']~.pace-activity::after {
+  clip-path: inset(92% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='9%']~.pace-activity::before {
+  clip-path: inset(91% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='9%']~.pace-activity::after {
+  clip-path: inset(91% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='10%']~.pace-activity::before {
+  clip-path: inset(90% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='10%']~.pace-activity::after {
+  clip-path: inset(90% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='11%']~.pace-activity::before {
+  clip-path: inset(89% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='11%']~.pace-activity::after {
+  clip-path: inset(89% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='12%']~.pace-activity::before {
+  clip-path: inset(88% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='12%']~.pace-activity::after {
+  clip-path: inset(88% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='13%']~.pace-activity::before {
+  clip-path: inset(87% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='13%']~.pace-activity::after {
+  clip-path: inset(87% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='14%']~.pace-activity::before {
+  clip-path: inset(86% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='14%']~.pace-activity::after {
+  clip-path: inset(86% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='15%']~.pace-activity::before {
+  clip-path: inset(85% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='15%']~.pace-activity::after {
+  clip-path: inset(85% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='16%']~.pace-activity::before {
+  clip-path: inset(84% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='16%']~.pace-activity::after {
+  clip-path: inset(84% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='17%']~.pace-activity::before {
+  clip-path: inset(83% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='17%']~.pace-activity::after {
+  clip-path: inset(83% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='18%']~.pace-activity::before {
+  clip-path: inset(82% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='18%']~.pace-activity::after {
+  clip-path: inset(82% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='19%']~.pace-activity::before {
+  clip-path: inset(81% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='19%']~.pace-activity::after {
+  clip-path: inset(81% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='20%']~.pace-activity::before {
+  clip-path: inset(80% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='20%']~.pace-activity::after {
+  clip-path: inset(80% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='21%']~.pace-activity::before {
+  clip-path: inset(79% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='21%']~.pace-activity::after {
+  clip-path: inset(79% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='22%']~.pace-activity::before {
+  clip-path: inset(78% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='22%']~.pace-activity::after {
+  clip-path: inset(78% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='23%']~.pace-activity::before {
+  clip-path: inset(77% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='23%']~.pace-activity::after {
+  clip-path: inset(77% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='24%']~.pace-activity::before {
+  clip-path: inset(76% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='24%']~.pace-activity::after {
+  clip-path: inset(76% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='25%']~.pace-activity::before {
+  clip-path: inset(75% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='25%']~.pace-activity::after {
+  clip-path: inset(75% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='26%']~.pace-activity::before {
+  clip-path: inset(74% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='26%']~.pace-activity::after {
+  clip-path: inset(74% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='27%']~.pace-activity::before {
+  clip-path: inset(73% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='27%']~.pace-activity::after {
+  clip-path: inset(73% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='28%']~.pace-activity::before {
+  clip-path: inset(72% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='28%']~.pace-activity::after {
+  clip-path: inset(72% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='29%']~.pace-activity::before {
+  clip-path: inset(71% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='29%']~.pace-activity::after {
+  clip-path: inset(71% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='30%']~.pace-activity::before {
+  clip-path: inset(70% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='30%']~.pace-activity::after {
+  clip-path: inset(70% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='31%']~.pace-activity::before {
+  clip-path: inset(69% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='31%']~.pace-activity::after {
+  clip-path: inset(69% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='32%']~.pace-activity::before {
+  clip-path: inset(68% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='32%']~.pace-activity::after {
+  clip-path: inset(68% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='33%']~.pace-activity::before {
+  clip-path: inset(67% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='33%']~.pace-activity::after {
+  clip-path: inset(67% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='34%']~.pace-activity::before {
+  clip-path: inset(66% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='34%']~.pace-activity::after {
+  clip-path: inset(66% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='35%']~.pace-activity::before {
+  clip-path: inset(65% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='35%']~.pace-activity::after {
+  clip-path: inset(65% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='36%']~.pace-activity::before {
+  clip-path: inset(64% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='36%']~.pace-activity::after {
+  clip-path: inset(64% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='37%']~.pace-activity::before {
+  clip-path: inset(63% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='37%']~.pace-activity::after {
+  clip-path: inset(63% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='38%']~.pace-activity::before {
+  clip-path: inset(62% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='38%']~.pace-activity::after {
+  clip-path: inset(62% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='39%']~.pace-activity::before {
+  clip-path: inset(61% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='39%']~.pace-activity::after {
+  clip-path: inset(61% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='40%']~.pace-activity::before {
+  clip-path: inset(60% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='40%']~.pace-activity::after {
+  clip-path: inset(60% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='41%']~.pace-activity::before {
+  clip-path: inset(59% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='41%']~.pace-activity::after {
+  clip-path: inset(59% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='42%']~.pace-activity::before {
+  clip-path: inset(58% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='42%']~.pace-activity::after {
+  clip-path: inset(58% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='43%']~.pace-activity::before {
+  clip-path: inset(57% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='43%']~.pace-activity::after {
+  clip-path: inset(57% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='44%']~.pace-activity::before {
+  clip-path: inset(56% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='44%']~.pace-activity::after {
+  clip-path: inset(56% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='45%']~.pace-activity::before {
+  clip-path: inset(55% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='45%']~.pace-activity::after {
+  clip-path: inset(55% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='46%']~.pace-activity::before {
+  clip-path: inset(54% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='46%']~.pace-activity::after {
+  clip-path: inset(54% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='47%']~.pace-activity::before {
+  clip-path: inset(53% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='47%']~.pace-activity::after {
+  clip-path: inset(53% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='48%']~.pace-activity::before {
+  clip-path: inset(52% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='48%']~.pace-activity::after {
+  clip-path: inset(52% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='49%']~.pace-activity::before {
+  clip-path: inset(51% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='49%']~.pace-activity::after {
+  clip-path: inset(51% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='50%']~.pace-activity::before {
+  clip-path: inset(50% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='50%']~.pace-activity::after {
+  clip-path: inset(50% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='51%']~.pace-activity::before {
+  clip-path: inset(49% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='51%']~.pace-activity::after {
+  clip-path: inset(49% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='52%']~.pace-activity::before {
+  clip-path: inset(48% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='52%']~.pace-activity::after {
+  clip-path: inset(48% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='53%']~.pace-activity::before {
+  clip-path: inset(47% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='53%']~.pace-activity::after {
+  clip-path: inset(47% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='54%']~.pace-activity::before {
+  clip-path: inset(46% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='54%']~.pace-activity::after {
+  clip-path: inset(46% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='55%']~.pace-activity::before {
+  clip-path: inset(45% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='55%']~.pace-activity::after {
+  clip-path: inset(45% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='56%']~.pace-activity::before {
+  clip-path: inset(44% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='56%']~.pace-activity::after {
+  clip-path: inset(44% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='57%']~.pace-activity::before {
+  clip-path: inset(43% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='57%']~.pace-activity::after {
+  clip-path: inset(43% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='58%']~.pace-activity::before {
+  clip-path: inset(42% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='58%']~.pace-activity::after {
+  clip-path: inset(42% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='59%']~.pace-activity::before {
+  clip-path: inset(41% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='59%']~.pace-activity::after {
+  clip-path: inset(41% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='60%']~.pace-activity::before {
+  clip-path: inset(40% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='60%']~.pace-activity::after {
+  clip-path: inset(40% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='61%']~.pace-activity::before {
+  clip-path: inset(39% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='61%']~.pace-activity::after {
+  clip-path: inset(39% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='62%']~.pace-activity::before {
+  clip-path: inset(38% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='62%']~.pace-activity::after {
+  clip-path: inset(38% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='63%']~.pace-activity::before {
+  clip-path: inset(37% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='63%']~.pace-activity::after {
+  clip-path: inset(37% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='64%']~.pace-activity::before {
+  clip-path: inset(36% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='64%']~.pace-activity::after {
+  clip-path: inset(36% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='65%']~.pace-activity::before {
+  clip-path: inset(35% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='65%']~.pace-activity::after {
+  clip-path: inset(35% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='66%']~.pace-activity::before {
+  clip-path: inset(34% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='66%']~.pace-activity::after {
+  clip-path: inset(34% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='67%']~.pace-activity::before {
+  clip-path: inset(33% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='67%']~.pace-activity::after {
+  clip-path: inset(33% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='68%']~.pace-activity::before {
+  clip-path: inset(32% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='68%']~.pace-activity::after {
+  clip-path: inset(32% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='69%']~.pace-activity::before {
+  clip-path: inset(31% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='69%']~.pace-activity::after {
+  clip-path: inset(31% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='70%']~.pace-activity::before {
+  clip-path: inset(30% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='70%']~.pace-activity::after {
+  clip-path: inset(30% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='71%']~.pace-activity::before {
+  clip-path: inset(29% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='71%']~.pace-activity::after {
+  clip-path: inset(29% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='72%']~.pace-activity::before {
+  clip-path: inset(28% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='72%']~.pace-activity::after {
+  clip-path: inset(28% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='73%']~.pace-activity::before {
+  clip-path: inset(27% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='73%']~.pace-activity::after {
+  clip-path: inset(27% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='74%']~.pace-activity::before {
+  clip-path: inset(26% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='74%']~.pace-activity::after {
+  clip-path: inset(26% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='75%']~.pace-activity::before {
+  clip-path: inset(25% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='75%']~.pace-activity::after {
+  clip-path: inset(25% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='76%']~.pace-activity::before {
+  clip-path: inset(24% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='76%']~.pace-activity::after {
+  clip-path: inset(24% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='77%']~.pace-activity::before {
+  clip-path: inset(23% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='77%']~.pace-activity::after {
+  clip-path: inset(23% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='78%']~.pace-activity::before {
+  clip-path: inset(22% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='78%']~.pace-activity::after {
+  clip-path: inset(22% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='79%']~.pace-activity::before {
+  clip-path: inset(21% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='79%']~.pace-activity::after {
+  clip-path: inset(21% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='80%']~.pace-activity::before {
+  clip-path: inset(20% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='80%']~.pace-activity::after {
+  clip-path: inset(20% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='81%']~.pace-activity::before {
+  clip-path: inset(19% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='81%']~.pace-activity::after {
+  clip-path: inset(19% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='82%']~.pace-activity::before {
+  clip-path: inset(18% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='82%']~.pace-activity::after {
+  clip-path: inset(18% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='83%']~.pace-activity::before {
+  clip-path: inset(17% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='83%']~.pace-activity::after {
+  clip-path: inset(17% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='84%']~.pace-activity::before {
+  clip-path: inset(16% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='84%']~.pace-activity::after {
+  clip-path: inset(16% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='85%']~.pace-activity::before {
+  clip-path: inset(15% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='85%']~.pace-activity::after {
+  clip-path: inset(15% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='86%']~.pace-activity::before {
+  clip-path: inset(14% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='86%']~.pace-activity::after {
+  clip-path: inset(14% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='87%']~.pace-activity::before {
+  clip-path: inset(13% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='87%']~.pace-activity::after {
+  clip-path: inset(13% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='88%']~.pace-activity::before {
+  clip-path: inset(12% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='88%']~.pace-activity::after {
+  clip-path: inset(12% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='89%']~.pace-activity::before {
+  clip-path: inset(11% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='89%']~.pace-activity::after {
+  clip-path: inset(11% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='90%']~.pace-activity::before {
+  clip-path: inset(10% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='90%']~.pace-activity::after {
+  clip-path: inset(10% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='91%']~.pace-activity::before {
+  clip-path: inset(9% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='91%']~.pace-activity::after {
+  clip-path: inset(9% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='92%']~.pace-activity::before {
+  clip-path: inset(8% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='92%']~.pace-activity::after {
+  clip-path: inset(8% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='93%']~.pace-activity::before {
+  clip-path: inset(7% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='93%']~.pace-activity::after {
+  clip-path: inset(7% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='94%']~.pace-activity::before {
+  clip-path: inset(6% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='94%']~.pace-activity::after {
+  clip-path: inset(6% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='95%']~.pace-activity::before {
+  clip-path: inset(5% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='95%']~.pace-activity::after {
+  clip-path: inset(5% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='96%']~.pace-activity::before {
+  clip-path: inset(4% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='96%']~.pace-activity::after {
+  clip-path: inset(4% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='97%']~.pace-activity::before {
+  clip-path: inset(3% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='97%']~.pace-activity::after {
+  clip-path: inset(3% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='98%']~.pace-activity::before {
+  clip-path: inset(2% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='98%']~.pace-activity::after {
+  clip-path: inset(2% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='99%']~.pace-activity::before {
+  clip-path: inset(1% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='99%']~.pace-activity::after {
+  clip-path: inset(1% 0 0 0);
+}
+.pace .pace-progress[data-progress-text='100%']~.pace-activity::before {
+  clip-path: inset(0 0 0 0);
+}
+.pace .pace-progress[data-progress-text='100%']~.pace-activity::after {
+  clip-path: inset(0 0 0 0);
+}
 :root {
   --ark-cab-border-color: rgba(255,255,255,0.7);
   --ark-cab-shadow-color: rgba(226,248,24,0.8);
