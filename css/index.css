@@ -16205,9 +16205,9 @@ div.timenode .meta:after {
   color: var(--font-color);
 }
 :root {
-  --card-friend-class-desc-bgcolor: #e7e7e7;
-  --card-friend-name-color: #000;
-  --card-friend-item-hover: #e1e1e1;
+  --card-friend-class-desc-bgcolor: #111;
+  --card-friend-name-color: #fff;
+  --card-friend-item-hover: #222;
   --card-friend-descr-color: #797979;
 }
 [data-theme="dark"] {
@@ -16227,7 +16227,13 @@ div.timenode .meta:after {
   display: none;
 }
 .card-widget.card-friend-link summary.card-friend-class-desc {
+  background: none !important;
   padding: 0px 15px;
+  color: var(--card-friend-name-color);
+}
+.card-widget.card-friend-link details {
+  background: none !important;
+  border: none !important;
 }
 .card-widget.card-friend-link details.card-friend-class-name[open] summary.card-friend-class-desc {
   position: sticky;
@@ -16245,6 +16251,7 @@ div.timenode .meta:after {
   display: -ms-flexbox;
   display: box;
   display: flex;
+  -webkit-box-align: center;
   -webkit-box-align: center;
   -moz-box-align: center;
   -o-box-align: center;
@@ -16265,7 +16272,7 @@ div.timenode .meta:after {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  margin: 10px 10px;
+  margin: 10px;
 }
 .card-widget.card-friend-link .offline-friend-link img.card-friend-avatar {
   filter: grayscale(100%);
@@ -16279,24 +16286,21 @@ div.timenode .meta:after {
   display: -ms-flexbox;
   display: box;
   display: flex;
-  -webkit-box-lines: single;
-  -moz-box-lines: single;
-  -o-box-lines: single;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
   -webkit-box-orient: vertical;
   -moz-box-orient: vertical;
   -o-box-orient: vertical;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-pack: center;
   -webkit-box-pack: center;
   -moz-box-pack: center;
   -o-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  -webkit-box-align: start;
   -webkit-box-align: start;
   -moz-box-align: start;
   -o-box-align: start;
