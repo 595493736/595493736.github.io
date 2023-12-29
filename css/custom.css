@@ -517,7 +517,18 @@ hr::after {
 .article-sort-title,
 .article-sort,
 .article-sort-item-title,
-div.timenode .meta p,
+.div.timenode .meta p,
+#ark-menu-random-post a svg use,
+#search-button a svg use,
+#toggle-menu1 a svg use,
 .article-sort-item-time {
   color: #fff!important;
+}
+
+#ark-menu-random-post,
+#search-button,
+#toggle-menu1 {
+  display: flex;
+  align-items: center;
+  margin: 0 3px;
 }

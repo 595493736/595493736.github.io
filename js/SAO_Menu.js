@@ -71,7 +71,7 @@ function linkStart(link){
     window.location.href = link;
   }
   else{
-    if (pjax){
+    if (typeof(pjax) != 'undefined'){
       pjax.loadUrl(link);
     }
     else{
