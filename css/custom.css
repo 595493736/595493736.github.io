@@ -514,3 +514,10 @@ hr::after {
     -ms-transition: all .5s cubic-bezier(.59,.01,.48,1.17);
     transition: all .5s cubic-bezier(.59,.01,.48,1.17)
 }
+.article-sort-title,
+.article-sort,
+.article-sort-item-title,
+div.timenode .meta p,
+.article-sort-item-time {
+  color: #fff!important;
+}

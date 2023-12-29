@@ -11,7 +11,7 @@ document.addEventListener('scroll',function(){
   // if (eventlistner&&pagination){
   if (footer&&pagination){
     // var centerY = eventlistner.offsetTop+(eventlistner.offsetHeight/2);
-	var centerY = footer.offsetTop+(footer.offsetHeight/2);
+  var centerY = footer.offsetTop+(footer.offsetHeight/2);
     if(centerY>visibleTop&&centerY<visibleBottom){
       pagination.style.display = 'flex';
     }else{

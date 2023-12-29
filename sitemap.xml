@@ -2,9 +2,65 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://example.com/bangumis/</loc>
+    
+    <lastmod>2023-12-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/reward/</loc>
+    
+    <lastmod>2023-12-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/about/</loc>
+    
+    <lastmod>2023-12-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/gallery/</loc>
+    
+    <lastmod>2023-12-29</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://example.com/comments/</loc>
     
-    <lastmod>2023-12-21</lastmod>
+    <lastmod>2023-12-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/link/</loc>
+    
+    <lastmod>2023-12-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/tags/</loc>
+    
+    <lastmod>2023-12-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/gallery/test/</loc>
+    
+    <lastmod>2023-12-28</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/fcircle/</loc>
+    
+    <lastmod>2023-12-28</lastmod>
     
   </url>
   
@@ -12,20 +68,6 @@
     <loc>http://example.com/manifest.json</loc>
     
     <lastmod>2023-12-13</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://example.com/tags/</loc>
-    
-    <lastmod>2023-12-11</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://example.com/link/</loc>
-    
-    <lastmod>2023-12-11</lastmod>
     
   </url>
   
@@ -53,7 +95,7 @@
 
   <url>
     <loc>http://example.com/</loc>
-    <lastmod>2023-12-27</lastmod>
+    <lastmod>2023-12-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -61,14 +103,14 @@
   
   <url>
     <loc>http://example.com/tags/%F0%9F%93%81Hexo/</loc>
-    <lastmod>2023-12-27</lastmod>
+    <lastmod>2023-12-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://example.com/tags/%F0%9F%A6%8BButterfly/</loc>
-    <lastmod>2023-12-27</lastmod>
+    <lastmod>2023-12-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -77,7 +119,7 @@
   
   <url>
     <loc>http://example.com/categories/%F0%9F%8D%A1Senpkeshti%E3%81%AE%E5%B0%8F%E7%AD%91/</loc>
-    <lastmod>2023-12-27</lastmod>
+    <lastmod>2023-12-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
