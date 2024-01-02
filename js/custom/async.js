@@ -40,15 +40,15 @@ function PublicSacrificeDay() {
     t.getDate() > 9 ? i += t.getDate() : i += "0" + t.getDate(),
     e.indexOf(i) > -1 ? 1 : 0
 }
-function searchSize() {
-    if (document.body.clientWidth > 768)
-        return;
-    let e = document.querySelector("#algolia-hits");
-    e.addEventListener("DOMNodeInserted", (()=>{
-        e.children[0].style.maxHeight = document.documentElement.clientHeight - 310 + "px"
-    }
-    ))
-}
+// function searchSize() {
+//     if (document.body.clientWidth > 768)
+//         return;
+//     let e = document.querySelector("#algolia-hits");
+//     e.addEventListener("DOMNodeInserted", (()=>{
+//         e.children[0].style.maxHeight = document.documentElement.clientHeight - 310 + "px"
+//     }
+//     ))
+// }
 document.addEventListener("visibilitychange", (function() {
     document.hidden ? (document.title = "w(ﾟДﾟ)w 不要走！再看看嘛！",
     clearTimeout(titleTime)) : (document.title = "♪(^∇^*)欢迎回来！" + OriginTitile,
@@ -59,8 +59,8 @@ document.addEventListener("visibilitychange", (function() {
 }
 )),
 PublicSacrificeDay() && document.getElementsByTagName("html")[0].setAttribute("style", "filter:gray !important;filter:grayscale(100%);-webkit-filter:grayscale(100%);-moz-filter:grayscale(100%);-ms-filter:grayscale(100%);-o-filter:grayscale(100%);"),
-searchSize(),
-window.addEventListener("resize", searchSize),
+// searchSize(),
+// window.addEventListener("resize", searchSize),
 document.addEventListener("scroll", (function() {
     var e = window.scrollY + document.documentElement.clientHeight
       , t = window.scrollY
