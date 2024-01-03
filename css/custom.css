@@ -223,7 +223,7 @@ div#category{
   }
 
   .tk-comment .tk-main .tk-replies {
-    left: -50px
+    /* left: -50px */
   }
 
   .tk-comment .tk-main .tk-content {
