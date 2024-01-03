@@ -81,3 +81,19 @@ var ark_menu_first_swiper = new Swiper(".menu-item-container",{
         pauseOnMouseEnter: !0
     }
 })
+
+var article_swiper = new Swiper(".ark-article-sort-container",{
+    direction: "horizontal",
+    slidesPerView: "auto",
+    spaceBetween: 30,
+    centeredSlides: !0,
+    updateOnWindowResize: !0,
+    grabCursor: !0,
+    spaceBetween: 10,
+    mousewheel: !0,
+    autoplay: {
+        delay: 3000,
+        pauseOnMouseEnter: !0
+    }
+})
+    

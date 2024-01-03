@@ -1310,7 +1310,7 @@ canvas:not(#ribbon-canvas),
   --hr-border: #d2ebfd;
   --hr-before-color: #bfe4fb;
   --search-bg: #f6f8fa;
-  --search-input-color: #4c4948;
+  --search-input-color: #323232;
   --search-result-title: #4c4948;
   --preloader-bg: #37474f;
   --preloader-color: #fff;
@@ -1919,37 +1919,6 @@ blockquote footer cite:before {
   padding-bottom: 1rem;
   padding-left: 1rem;
   font-size: 1.72em;
-}
-.article-sort-title:hover:before {
-  border-color: #ff7242;
-}
-.article-sort-title:before {
-  position: absolute;
-  top: calc(((100% - 1.8rem) / 2));
-  left: -0.45rem;
-  z-index: 1;
-  width: 0.5rem;
-  height: 0.5rem;
-  border: 0.25rem solid #49b1f5;
-  border-radius: 0.5rem;
-  background: var(--card-bg);
-  content: '';
-  line-height: 0.5rem;
-  -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-  -ms-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-}
-.article-sort-title:after {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  z-index: 0;
-  width: 0.1rem;
-  height: 1.5em;
-  background: #aadafa;
-  content: '';
 }
 .article-sort-item {
   position: relative;
@@ -2581,6 +2550,267 @@ blockquote footer cite:before {
   .tag-cloud-title {
     font-size: 2em;
   }
+}
+.article-sort-title {
+  font-family: UnidreamLED, TaikoMagic;
+  background: 0 0;
+  display: block;
+  font-size: 40px;
+  line-height: 1;
+  color: var(--pagenumber-color);
+  text-shadow: 2px 2px 3px rgba(0,0,0,0.5);
+  overflow: hidden;
+  margin: 0 3px 0 0;
+  height: 45px;
+  width: 100%;
+  text-align: center;
+}
+.article-sort-title .article-sort-title-text {
+  float: left;
+  white-space: nowrap;
+  -webkit-animation: text-roll 4s cubic-bezier(0.6, 0, 0.5, 1) alternate infinite;
+  -moz-animation: text-roll 4s cubic-bezier(0.6, 0, 0.5, 1) alternate infinite;
+  -o-animation: text-roll 4s cubic-bezier(0.6, 0, 0.5, 1) alternate infinite;
+  -ms-animation: text-roll 4s cubic-bezier(0.6, 0, 0.5, 1) alternate infinite;
+  animation: text-roll 4s cubic-bezier(0.6, 0, 0.5, 1) alternate infinite;
+  min-width: 100%;
+}
+.ark-article-sort-container {
+  font-family: UnidreamLED, TaikoMagic;
+  text-shadow: 2px 2px 1px rgba(0,0,0,0.5);
+  display: block;
+  height: 300px;
+  width: 100%;
+  overflow: hidden;
+  background: -webkit-linear-gradient(top, transparent, transparent 25px, var(--pagenumber-background-color) 25px, var(--pagenumber-background-color) 50px, transparent 50px, transparent);
+  background: -moz-linear-gradient(top, transparent, transparent 25px, var(--pagenumber-background-color) 25px, var(--pagenumber-background-color) 50px, transparent 50px, transparent);
+  background: -o-linear-gradient(top, transparent, transparent 25px, var(--pagenumber-background-color) 25px, var(--pagenumber-background-color) 50px, transparent 50px, transparent);
+  background: -ms-linear-gradient(top, transparent, transparent 25px, var(--pagenumber-background-color) 25px, var(--pagenumber-background-color) 50px, transparent 50px, transparent);
+  background: linear-gradient(to bottom, transparent, transparent 25px, var(--pagenumber-background-color) 25px, var(--pagenumber-background-color) 50px, transparent 50px, transparent);
+}
+.ark-article-sort-container .ark-article-sort-year {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -o-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -o-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  height: 35px;
+  width: 100px;
+  background: var(--pagenumber-current-color);
+  color: var(--pagenumber-color);
+  margin: 20px 20px;
+  clip-path: polygon(0 0, 5px 5px, 5px 30px, 0 35px, 100% 35px, calc(100% - 5px) 30px, calc(100% - 5px) 5px, 100% 0);
+}
+.ark-article-sort-container .ark-article-sort-year > * {
+  margin: 0 3px;
+}
+.ark-article-sort-container .ark-article-sort-year svg.icon {
+  width: 1.2em;
+  height: 1.2em;
+}
+.ark-article-sort-container .ark-article-sort-item {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  position: relative;
+  height: 300px;
+  width: auto;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -o-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -o-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  margin: 20px 20px;
+  padding: 40px 0 0 0;
+}
+.ark-article-sort-container .ark-article-sort-item::before {
+  content: "";
+  position: absolute;
+  height: 35px;
+  width: 100px;
+  top: 0;
+  left: calc(50% - 50px);
+  background: var(--pagenumber-current-color);
+  clip-path: polygon(0 0, 5px 5px, 5px 30px, 0 35px, 100% 35px, calc(100% - 5px) 30px, calc(100% - 5px) 5px, 100% 0);
+}
+.ark-article-sort-container .ark-article-sort-item::after {
+  content: "";
+  position: absolute;
+  height: 18px;
+  width: 16px;
+  top: 23px;
+  left: calc(50% - 8px);
+  background: var(--pagenumber-color);
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+.ark-article-sort-container .ark-article-sort-item .ark-article-sort-item-date {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -o-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -o-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  height: 30px;
+  width: auto;
+  color: var(--pagenumber-color);
+}
+.ark-article-sort-container .ark-article-sort-item .ark-article-sort-item-date span.post-meta-date-split {
+  margin: 0 5px;
+}
+.ark-article-sort-container .ark-article-sort-item label.ark-article-sort-item-info {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -o-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 200px;
+  width: auto;
+  position: relative;
+  padding: 5px 5px;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -o-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.ark-article-sort-container .ark-article-sort-item label.ark-article-sort-item-info input[type=checkbox] {
+  display: none;
+}
+.ark-article-sort-container .ark-article-sort-item label.ark-article-sort-item-info input[type=checkbox]:checked ~ .ark-article-sort-item-detail {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+}
+.ark-article-sort-container .ark-article-sort-item label.ark-article-sort-item-info .ark-article-sort-item-title {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  height: 30px;
+  color: var(--pagenumber-color);
+  width: auto;
+  line-height: 1;
+  font-size: 20px;
+  padding: 5px 10px;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -o-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -o-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.ark-article-sort-container .ark-article-sort-item label.ark-article-sort-item-info .ark-article-sort-item-title:hover ~ .ark-article-sort-item-detail {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+}
+.ark-article-sort-container .ark-article-sort-item label.ark-article-sort-item-info a.ark-article-sort-item-detail {
+  width: 180px;
+  height: auto;
+  overflow: hidden;
+  display: none;
+  color: var(--pagenumber-color);
+  font-size: 16px;
+  position: relative;
+}
+.ark-article-sort-container .ark-article-sort-item label.ark-article-sort-item-info a.ark-article-sort-item-detail .ark-article-sort-item-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 35px;
+  width: 35px;
+  clip-path: polygon(30% 0, 70% 0, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0 70%, 0 30%);
+}
+.ark-article-sort-container .ark-article-sort-item label.ark-article-sort-item-info a.ark-article-sort-item-detail .ark-article-sort-item-img img {
+  width: 35px;
+  height: 35px;
+  object-fit: cover;
+}
+.ark-article-sort-container .ark-article-sort-item label.ark-article-sort-item-info a.ark-article-sort-item-detail .ark-article-sort-item-descr {
+  background: -webkit-radial-gradient(#000, transparent);
+  background: -moz-radial-gradient(#000, transparent);
+  background: -o-radial-gradient(#000, transparent);
+  background: -ms-radial-gradient(#000, transparent);
+  background: radial-gradient(#000, transparent);
+  text-indent: 40px;
+  font-size: 16px;
+  padding: 5px 5px;
+  clip-path: polygon(42px 0, 42px 24px, 24px 42px, 0 42px, 0 100%, 99% 100%, 100% 0);
+  font-family: ZhuZiAYuanJWD;
+}
+.ark-article-sort-container #pagination {
+  width: fit-content;
+  padding: 0 50px;
+}
+.ark-article-sort-container #pagination .pagination {
+  margin: 20px 0 0 0;
+}
+.ark-article-sort-container #pagination .pagination::after {
+  content: none;
+}
+.ark-article-sort-container .ark-article-sort-item .ark-article-sort-item-date time.post-meta-date-created,
+.ark-article-sort-container .ark-article-sort-item .ark-article-sort-item-date time.post-meta-date-updated {
+  background: var(--pagenumber-background-color);
+  padding: 3px 15px;
+  line-height: 1;
+  border-radius: 3px;
 }
 :root {
   --card-author-avatar-groove-border: rgba(244,252,252,0.3);
@@ -11493,7 +11723,8 @@ _:future,
     right: -48px;
   }
   #rightside:hover> div > button,
-  #rightside:hover> div > a {
+  #rightside:hover> div > a,
+  #rightside:hover> div > label {
     -webkit-transform: rotateZ(0deg);
     -moz-transform: rotateZ(0deg);
     -o-transform: rotateZ(0deg);
@@ -11512,8 +11743,10 @@ _:future,
   }
   #rightside:hover> div > button i,
   #rightside:hover> div > a i,
+  #rightside:hover> div > label i,
   #rightside:hover> div > button svg,
-  #rightside:hover> div > a svg {
+  #rightside:hover> div > a svg,
+  #rightside:hover> div > label svg {
     -webkit-transform: rotateZ(0deg);
     -moz-transform: rotateZ(0deg);
     -o-transform: rotateZ(0deg);
@@ -11526,7 +11759,8 @@ _:future,
     transition: transform 0.4s;
   }
   #rightside:hover> div > button span,
-  #rightside:hover> div > a span {
+  #rightside:hover> div > a span,
+  #rightside:hover> div > label span {
     opacity: 1;
     -ms-filter: none;
     filter: none;
@@ -11538,7 +11772,8 @@ _:future,
     transition: all 0.3s 0.2s;
   }
   #rightside> div > button,
-  #rightside> div > a {
+  #rightside> div > a,
+  #rightside> div > label {
     display: -webkit-box;
     display: -moz-box;
     display: -webkit-flex;
@@ -11596,8 +11831,10 @@ _:future,
   }
   #rightside> div > button i,
   #rightside> div > a i,
+  #rightside> div > label i,
   #rightside> div > button svg,
-  #rightside> div > a svg {
+  #rightside> div > a svg,
+  #rightside> div > label svg {
     -webkit-transform: rotateZ(90deg);
     -moz-transform: rotateZ(90deg);
     -o-transform: rotateZ(90deg);
@@ -11638,7 +11875,8 @@ _:future,
     padding: 5px;
   }
   #rightside> div > button span,
-  #rightside> div > a span {
+  #rightside> div > a span,
+  #rightside> div > label span {
     margin: 10px 3px 0px 0px;
     text-shadow: 1px 2px 3px var(--rightside-box-shadow);
     line-height: 1em;
@@ -11653,7 +11891,8 @@ _:future,
     transition: all 0.4s;
   }
   #rightside> div > button::before,
-  #rightside> div > a::before {
+  #rightside> div > a::before,
+  #rightside> div > label::before {
     content: "Skei";
     font-size: 12px;
     display: -webkit-box;
@@ -11682,7 +11921,8 @@ _:future,
     clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 100%, 0 100%);
   }
   #rightside> div > button::after,
-  #rightside> div > a::after {
+  #rightside> div > a::after,
+  #rightside> div > label::after {
     content: "";
     display: block;
     width: 16px;
@@ -11694,11 +11934,13 @@ _:future,
     clip-path: polygon(50% 0%, 100% 0%, 100% 50%, 85% 50%, 85% 15%, 50% 15%, 55% 0%, 27% 0%, 27% 30%, 27% 57%, 0% 57%, 0% 70%, 27% 70%, 27% 100%, 40% 100%, 40% 70%, 70% 70%, 70% 57%, 40% 57%, 40% 30%, 27% 30%, 27% 0%);
   }
   #rightside> div > button:hover,
-  #rightside> div > a:hover {
+  #rightside> div > a:hover,
+  #rightside> div > label:hover {
     background: var(--rightside-background-hover);
   }
   #rightside> div > button:hover i,
-  #rightside> div > a:hover i {
+  #rightside> div > a:hover i,
+  #rightside> div > label:hover i {
     color: var(--rightside-background-hover);
   }
 }
@@ -11708,7 +11950,8 @@ _:future,
     right: -48px;
   }
   #rightside> div > button,
-  #rightside> div > a {
+  #rightside> div > a,
+  #rightside> div > label {
     display: block;
     background: var(--rightside-m-background-color);
     position: relative;
@@ -11720,8 +11963,10 @@ _:future,
   }
   #rightside> div > button i,
   #rightside> div > a i,
+  #rightside> div > label i,
   #rightside> div > button svg,
-  #rightside> div > a svg {
+  #rightside> div > a svg,
+  #rightside> div > label svg {
     background: var(--rightside-m-icon-background);
     color: var(--rightside-m-icon-color);
     width: 25px;
@@ -11731,11 +11976,13 @@ _:future,
     border-radius: 50%;
   }
   #rightside> div > button span,
-  #rightside> div > a span {
+  #rightside> div > a span,
+  #rightside> div > label span {
     display: none;
   }
   #rightside> div > button::before,
-  #rightside> div > a::before {
+  #rightside> div > a::before,
+  #rightside> div > label::before {
     content: "";
     z-index: 2;
     background: var(--rightside-m-border-color);
@@ -11752,7 +11999,8 @@ _:future,
     transition: var(--rightside-transition);
   }
   #rightside> div > button::after,
-  #rightside> div > a::after {
+  #rightside> div > a::after,
+  #rightside> div > label::after {
     content: "";
     z-index: 1;
     background: var(--rightside-m-icon-background);
@@ -11765,11 +12013,13 @@ _:future,
     clip-path: polygon(10% 100%, 10% 0%, 0% 0%, 0% 100%, 10% 100%, 35% 100%, 40% 94%, 60% 94%, 65% 100%, 35% 100%, 35% 0%, 40% 6%, 60% 6%, 60% 0%, 35% 0%, 35% 100%, 90% 100%, 90% 0, 100% 0, 100% 100%, 35% 100%);
   }
   #rightside> div > button:hover,
-  #rightside> div > a:hover {
+  #rightside> div > a:hover,
+  #rightside> div > label:hover {
     background: var(--rightside-m-hover-color);
   }
   #rightside> div > button:hover::before,
-  #rightside> div > a:hover::before {
+  #rightside> div > a:hover::before,
+  #rightside> div > label:hover::before {
     left: -8px;
     top: -8px;
     width: 49px;
@@ -16194,7 +16444,7 @@ div.timenode .meta:after {
   --hr-border: rgba(255,255,255,0.4);
   --hr-before-color: rgba(255,255,255,0.7);
   --search-bg: #121212;
-  --search-input-color: rgba(255,255,255,0.7);
+  --search-input-color: rgba(30,49,55,0.7);
   --search-result-title: rgba(255,255,255,0.9);
   --preloader-bg: #0d0d0d;
   --preloader-color: rgba(255,255,255,0.7);
@@ -18176,7 +18426,7 @@ div#swiper_container {
   margin-left: -15rem;
   padding: 1rem;
   width: 30rem;
-  background: var(--search-bg);
+  background: var(--ark-container-background);
 }
 @media screen and (max-width: 768px) {
   .search-dialog {
@@ -18241,9 +18491,12 @@ div#swiper_container {
   outline: none;
   border: 2px solid #49b1f5;
   border-radius: 2rem;
-  background: var(--search-bg);
-  color: var(--search-input-color);
+  background: var(--search-input-color);
+  color: #fff;
   -webkit-appearance: none;
+}
+#local-search .search-dialog .local-search-box input::placeholder {
+  color: #fff;
 }
 #local-search .search-dialog .local-search__hit-item {
   position: relative;
@@ -18272,7 +18525,7 @@ div#swiper_container {
 }
 #local-search .search-dialog .local-search__hit-item a {
   display: block;
-  color: var(--search-result-title);
+  color: #fff;
   font-weight: 600;
   cursor: pointer;
 }
@@ -18288,6 +18541,7 @@ div#swiper_container {
   font-weight: bold;
 }
 #local-search .search-dialog .search-result-list {
+  color: #fff;
   overflow-y: auto;
   max-height: 10.5rem;
 }
